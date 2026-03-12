@@ -60,6 +60,16 @@
         .time { font-weight: bold; color: var(--azul-profundo); min-width: 120px; font-size: 0.95rem; }
         .activity { flex-grow: 1; line-height: 1.4; }
 
+        .nav-buttons {
+            display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px; padding-bottom: 40px;
+        }
+
+        .btn-secondary {
+            background-color: transparent; padding: 10px 25px; border-radius: 50px; 
+            text-decoration: none; font-size: 0.9rem; font-weight: bold; 
+            transition: 0.3s; display: inline-block; width: 280px; text-align: center;
+        }
+
         @media (max-width: 600px) {
             .schedule-item { flex-direction: column; }
             .time { margin-bottom: 5px; }
@@ -143,26 +153,24 @@
                 <span class="time">Tarde</span>
                 <span class="activity">Despedida de delegaciones y retorno autogestionado.</span>
             </div>
-       <div class="hero">
-        <img src="logo-dojo.png" alt="Dojo Nueva Esparta" class="logo-aikido">
-        <h1>Seminario Nacional de Aikido 2026</h1>
-        <div class="subtitle">Isla de Margarita - Club Cagene</div>
-        
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+        </div>
+
+        <div class="nav-buttons">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=header" class="btn-registro">REGISTRARSE AHORA</a>
             
-            <a href="pss.html" style="background-color: transparent; color: var(--verde-agua); padding: 10px 25px; border: 1px solid var(--verde-agua); border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: 0.3s; display: inline-block; width: 280px;">
+            <a href="pss.html" class="btn-secondary" style="color: var(--verde-agua); border: 1px solid var(--verde-agua);">
                 PROTOCOLO DE SEGURIDAD (PSS)
             </a>
 
-            <a href="reglas.html" style="background-color: transparent; color: var(--bronce); padding: 10px 25px; border: 1px solid var(--bronce); border-radius: 50px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: 0.3s; display: inline-block; width: 280px;">
+            <a href="reglas.html" class="btn-secondary" style="color: var(--bronce); border: 1px solid var(--bronce);">
                 REGLAS DE CONVIVENCIA
             </a>
 
-            <a href="datos.html" style="color: #bbb; text-decoration: underline; font-size: 0.8rem; margin-top: 5px;">
+            <a href="datos.html" style="color: #888; text-decoration: underline; font-size: 0.8rem; margin-top: 5px;">
                 Tratamiento de Datos Personales
             </a>
         </div>
+
     </div>
 
 </body>
