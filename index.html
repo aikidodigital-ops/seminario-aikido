@@ -3,43 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminario Nacional de Aikido 2026</title>
+    <title>Seminario Nacional de Aikido - Nueva Esparta</title>
     <style>
-        body, html { margin: 0; padding: 0; font-family: 'Helvetica Neue', sans-serif; height: 100%; color: white; background-color: #1a1a1a; }
+        :root {
+            --azul-profundo: #1a3a5a;
+            --verde-agua: #4db6ac;
+            --bronce: #cd7f32;
+            --blanco-hueso: #f4f4f4;
+        }
+
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background-color: var(--blanco-hueso); 
+            color: #333; 
+        }
         
-        /* Fondo con imagen y superposición oscura */
+        /* Sección Principal */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80'); 
-            background-size: cover; background-position: center;
-            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(rgba(26, 58, 90, 0.85), rgba(26, 58, 90, 0.85)), 
+                        url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80'); 
+            background-size: cover; 
+            background-position: center;
+            min-height: 80vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: white; 
+            padding: 20px;
         }
 
-        h1 { font-size: 3.5rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 3px; }
-        p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
+        /* Estilo del Logo */
+        .logo-aikido { 
+            width: 180px; 
+            height: auto; 
+            margin-bottom: 20px; 
+            border-radius: 50%; 
+            border: 4px solid var(--verde-agua);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            background-color: white; /* Por si el logo tiene transparencia */
+        }
 
-        /* Botón Interactivo */
+        h1 { font-size: 2.8rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .subtitle { font-size: 1.4rem; color: var(--verde-agua); margin-bottom: 30px; font-weight: bold; }
+
+        /* Cuadro del Cronograma */
+        .container { 
+            max-width: 800px; 
+            margin: -60px auto 40px; 
+            background: white; 
+            padding: 35px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+        
+        h2 { color: var(--azul-profundo); border-bottom: 3px solid var(--bronce); display: inline-block; padding-bottom: 5px; }
+        
+        .schedule-item { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 15px 0; 
+            border-bottom: 1px solid #eee; 
+        }
+        
+        .time { font-weight: bold; color: var(--azul-profundo); width: 110px; }
+        .activity { flex-grow: 1; text-align: left; }
+
+        /* Botón de Registro */
         .btn-registro {
-            background-color: #b22222; /* Rojo marcial */
-            color: white; padding: 15px 40px; border: none; border-radius: 50px;
-            font-size: 1.2rem; cursor: pointer; text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            background-color: var(--azul-profundo); 
+            color: white; 
+            padding: 18px 45px; 
+            border: 2px solid var(--verde-agua); 
+            border-radius: 50px;
+            font-size: 1.3rem; 
+            font-weight: bold; 
+            cursor: pointer; 
+            text-decoration: none; 
+            transition: 0.3s; 
+            display: inline-block; 
+            margin-top: 20px;
         }
-        .btn-registro:hover { background-color: #ff0000; transform: scale(1.1); }
+        
+        .btn-registro:hover { 
+            background-color: var(--verde-agua); 
+            color: var(--azul-profundo); 
+            transform: scale(1.05); 
+        }
 
-        /* Animación simple */
-        .fade-in { animation: fadeIn 2s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { margin: -30px 20px 40px; padding: 20px; }
+        }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <div class="fade-in">
-            <h1>Seminario Nacional de Aikido</h1>
-            <p>Únete a nosotros en una experiencia de armonía, disciplina y técnica. Cupos limitados.</p>
-            
-            <a href="https://tu-enlace-de-google-form-aquí" class="btn-registro">Registrarme Ahora</a>
+        <img src="logo-dojo.png" alt="Dojo Nueva Esparta" class="logo-aikido">
+        
+        <h1>Seminario Nacional de Aikido</h1>
+        <div class="subtitle">Dojo Nueva Esparta 2026</div>
+        
+        <a href="TU_LINK_AQUI" class="btn-registro">Inscribirse Ahora</a>
+    </div>
+
+    <div class="container">
+        <h2>Cronograma de Actividades</h2>
+        
+        <div class="schedule-item">
+            <span class="time">08:00 AM</span>
+            <span class="activity">Recepción y Registro de Participantes</span>
+        </div>
+        <div class="schedule-item">
+            <span class="time">09:00 AM</span>
+            <span class="activity">Primera Sesión: Fundamentos y Flujo</span>
+        </div>
+        <div class="schedule-item">
+            <span class="time">11:00 AM</span>
+            <span class="activity">Receso / Hidratación</span>
+        </div>
+        <div class="schedule-item">
+            <span class="time">11:30 AM</span>
+            <span class="activity">Segunda Sesión: Técnicas Avanzadas</span>
+        </div>
+        <div class="schedule-item">
+            <span class="time">01:30 PM</span>
+            <span class="activity">Cierre y Entrega de Diplomas</span>
         </div>
     </div>
 
