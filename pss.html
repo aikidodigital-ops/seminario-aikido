@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSS - Protocolo de Seguridad del Seminario</title>
+    <style>
+        :root {
+            --azul-profundo: #1a3a5a;
+            --verde-agua: #4db6ac;
+            --bronce: #cd7f32;
+            --blanco-hueso: #f4f4f4;
+        }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--blanco-hueso); margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        
+        h1 { color: var(--azul-profundo); border-bottom: 4px solid var(--verde-agua); padding-bottom: 10px; margin-top: 0; }
+        .intro { font-size: 1.1rem; line-height: 1.6; color: #555; margin-bottom: 30px; border-left: 4px solid var(--bronce); padding-left: 15px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.95rem; }
+        th { background-color: var(--azul-profundo); color: white; padding: 18px; text-align: left; text-transform: uppercase; letter-spacing: 1px; }
+        td { padding: 18px; border-bottom: 1px solid #eee; line-height: 1.5; }
+        tr:nth-child(even) { background-color: #fcfcfc; }
+        tr:hover { background-color: #f1f8f7; }
+
+        .btn-volver {
+            display: inline-block; margin-top: 35px; text-decoration: none;
+            color: var(--azul-profundo); font-weight: bold; border: 2px solid var(--azul-profundo);
+            padding: 12px 25px; border-radius: 50px; transition: 0.3s;
+        }
+        .btn-volver:hover { background: var(--azul-profundo); color: white; transform: translateX(-5px); }
+
+        @media (max-width: 600px) {
+            th { display: none; }
+            td { display: block; width: 100%; box-sizing: border-box; }
+            td:first-child { font-weight: bold; background-color: #eee; padding: 10px 18px; color: var(--azul-profundo); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PSS: Protocolo de Seguridad del Seminario</h1>
+        <p class="intro">En el Dojo Nueva Esparta, la integridad de los practicantes es nuestra prioridad. Este PSS establece las acciones inmediatas ante incidencias comunes en el tatami.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Situación / Lesión</th>
+                    <th>Acción Inmediata (Protocolo de Respuesta)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Esguince (Muñeca/Tobillo)</strong></td>
+                    <td>Método RICE: Reposo, Inhibición de movimiento, Compresión suave y Elevación del miembro afectado.</td>
+                </tr>
+                <tr>
+                    <td><strong>Contusión o Golpe Fuerte</strong></td>
+                    <td>Crioterapia: Aplicar frío local inmediatamente para reducir la inflamación y el dolor.</td>
+                </tr>
+                <tr>
+                    <td><strong>Luxación</strong></td>
+                    <td>Inmovilización estricta en la posición encontrada. <strong>No intentar reducir o "acomodar" el hueso</strong>. Traslado inmediato a urgencias.</td>
+                </tr>
+                <tr>
+                    <td><strong>Hemorragia Nasal (Epistaxis)</strong></td>
+                    <td>Inclinar la cabeza levemente hacia adelante (no hacia atrás) y presionar firmemente el tabique nasal.</td>
+                </tr>
+                <tr>
+                    <td><strong>Abrasiones (Quemaduras por Tatami)</strong></td>
+                    <td>Asepsia: Lavar con abundante agua y jabón neutro, aplicar antiséptico y cubrir con material estéril.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="index.html" class="btn-volver">← Volver a la página principal</a>
+    </div>
+</body>
+</html>
