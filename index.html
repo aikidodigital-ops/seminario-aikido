@@ -22,15 +22,17 @@
             background: linear-gradient(rgba(26, 58, 90, 0.85), rgba(26, 58, 90, 0.85)), 
                         url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80'); 
             background-size: cover; background-position: center;
-            min-height: 60vh; display: flex; flex-direction: column; 
+            min-height: 65vh; display: flex; flex-direction: column; 
             justify-content: center; align-items: center; text-align: center; 
             color: white; padding: 40px 20px;
         }
 
-        .logo-aikido { 
-            width: 160px; height: auto; margin-bottom: 20px; 
-            border-radius: 50%; border: 4px solid var(--verde-agua);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5); background-color: white;
+        /* Foto del Sensei como imagen principal */
+        .foto-sensei { 
+            width: 200px; height: 200px; margin-bottom: 20px; 
+            border-radius: 50%; border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+            object-fit: cover; /* Para que la foto no se deforme */
         }
 
         h1 { font-size: 2.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
@@ -61,7 +63,7 @@
         .activity { flex-grow: 1; line-height: 1.4; }
 
         .nav-buttons {
-            display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px; padding-bottom: 40px;
+            display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px; padding-bottom: 20px;
         }
 
         .btn-secondary {
@@ -69,6 +71,13 @@
             text-decoration: none; font-size: 0.9rem; font-weight: bold; 
             transition: 0.3s; display: inline-block; width: 280px; text-align: center;
         }
+
+        /* Estilo para el logo del dojo "Presentado por" */
+        .presentado-por {
+            text-align: center; margin-top: 30px; padding-bottom: 50px;
+        }
+        .presentado-por p { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .logo-pequeno { width: 80px; height: auto; opacity: 0.8; }
 
         @media (max-width: 600px) {
             .schedule-item { flex-direction: column; }
@@ -80,9 +89,11 @@
 <body>
 
     <div class="hero">
-        <img src="logo-dojo.png" alt="Dojo Nueva Esparta" class="logo-aikido">
+        <img src="sensei.jpg" alt="Shihan Nelson Requena" class="foto-sensei">
+        
         <h1>Seminario Nacional de Aikido 2026</h1>
         <div class="subtitle">Isla de Margarita - La Asunción - CAGENE</div>
+        
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=pp_url&entry.117793497=Si&entry.863649477=Acepto&entry.1436785906=Acepto&entry.243143659=Acepto&entry.741312543=Acepto&entry.404434222=Acepto&entry.1800351506=Acepto" class="btn-registro">REGISTRARSE AHORA</a>
     </div>
 
@@ -91,84 +102,37 @@
         <div class="day-card">
             <h2>Viernes 4 de Diciembre</h2>
             <h3>Apertura y Mística</h3>
-            <div class="schedule-item">
-                <span class="time">14:00 – 16:00</span>
-                <span class="activity">Recepción de delegaciones y entrega de Kits de Bienvenida (Dulcería tradicional).</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">16:00 – 17:00</span>
-                <span class="activity">Registro digital y acreditación de participantes.</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">17:00 – 19:00</span>
-                <span class="activity"><strong>Sesión de Aikido I:</strong> Apertura técnica.</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">19:00 en ad.</span>
-                <span class="activity">Noche libre: Descanso o exploración de la zona.</span>
-            </div>
+            <div class="schedule-item"><span class="time">14:00 – 16:00</span><span class="activity">Recepción y entrega de Kits (Dulcería tradicional).</span></div>
+            <div class="schedule-item"><span class="time">16:00 – 17:00</span><span class="activity">Registro digital y acreditación.</span></div>
+            <div class="schedule-item"><span class="time">17:00 – 19:00</span><span class="activity"><strong>Sesión I:</strong> Apertura técnica.</span></div>
         </div>
 
         <div class="day-card">
             <h2>Sábado 5 de Diciembre</h2>
             <h3>Inmersión Técnica e Historicidad</h3>
-            <div class="schedule-item">
-                <span class="time">07:30 – 08:30</span>
-                <span class="activity">Desayuno típico (Empanadas locales).</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">09:00 – 12:00</span>
-                <span class="activity"><strong>Sesión de Aikido II:</strong> Práctica intensiva (3h).</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">12:00 – 14:00</span>
-                <span class="activity">Almuerzo y Networking en zona de stands comerciales.</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">14:00 – 17:00</span>
-                <span class="activity"><strong>Sesión de Aikido III:</strong> Práctica intensiva (3h).</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">17:30 – 20:00</span>
-                <span class="activity">Circuito Histórico La Asunción: Castillo de Santa Rosa y museos.</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">20:30 – Cierre</span>
-                <span class="activity">Cena de Confraternidad (Restaurant seleccionado).</span>
-            </div>
+            <div class="schedule-item"><span class="time">07:30 – 08:30</span><span class="activity">Desayuno típico (Empanadas).</span></div>
+            <div class="schedule-item"><span class="time">09:00 – 12:00</span><span class="activity"><strong>Sesión II:</strong> Práctica intensiva (3h).</span></div>
+            <div class="schedule-item"><span class="time">14:00 – 17:00</span><span class="activity"><strong>Sesión III:</strong> Práctica intensiva (3h).</span></div>
+            <div class="schedule-item"><span class="time">17:30 – 20:00</span><span class="activity">Circuito Histórico: Castillo de Santa Rosa.</span></div>
         </div>
 
         <div class="day-card">
             <h2>Domingo 6 de Diciembre</h2>
-            <h3>Evaluación y Cierre Emocional</h3>
-            <div class="schedule-item">
-                <span class="time">09:00 – 12:00</span>
-                <span class="activity"><strong>Sesión de Aikido IV:</strong> Exámenes de Grado.</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">12:00 – 13:30</span>
-                <span class="activity">Clausura: Palabras del Shihan Nelson Requena, entrega de certificados y foto oficial.</span>
-            </div>
-            <div class="schedule-item">
-                <span class="time">Tarde</span>
-                <span class="activity">Despedida de delegaciones y retorno autogestionado.</span>
-            </div>
+            <h3>Evaluación y Cierre</h3>
+            <div class="schedule-item"><span class="time">09:00 – 12:00</span><span class="activity"><strong>Sesión IV:</strong> Exámenes de Grado.</span></div>
+            <div class="schedule-item"><span class="time">12:00 – 13:30</span><span class="activity">Protocolo de Clausura y foto oficial.</span></div>
         </div>
 
         <div class="nav-buttons">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=pp_url&entry.117793497=Si&entry.863649477=Acepto&entry.1436785906=Acepto&entry.243143659=Acepto&entry.741312543=Acepto&entry.404434222=Acepto&entry.1800351506=Acepto" class="btn-registro">REGISTRARSE AHORA</a>
-            
-            <a href="pss.html" class="btn-secondary" style="color: var(--verde-agua); border: 1px solid var(--verde-agua);">
-                PROTOCOLO DE SEGURIDAD (PSS)
-            </a>
+            <a href="pss.html" class="btn-secondary" style="color: var(--verde-agua); border: 1px solid var(--verde-agua);">PROTOCOLO DE SEGURIDAD (PSS)</a>
+            <a href="reglas.html" class="btn-secondary" style="color: var(--bronce); border: 1px solid var(--bronce);">REGLAS DE CONVIVENCIA</a>
+            <a href="datos.html" style="color: #888; text-decoration: underline; font-size: 0.8rem;">Tratamiento de Datos Personales</a>
+        </div>
 
-            <a href="reglas.html" class="btn-secondary" style="color: var(--bronce); border: 1px solid var(--bronce);">
-                REGLAS DE CONVIVENCIA
-            </a>
-
-            <a href="datos.html" style="color: #888; text-decoration: underline; font-size: 0.8rem; margin-top: 5px;">
-                Tratamiento de Datos Personales
-            </a>
+        <div class="presentado-por">
+            <p>Presentado por</p>
+            <img src="logo-dojo.png" alt="Logo Dojo Nueva Esparta" class="logo-pequeno">
         </div>
 
     </div>
