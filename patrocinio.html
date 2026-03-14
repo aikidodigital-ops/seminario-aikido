@@ -10,17 +10,11 @@
         :root { --primary-blue: #1a3a5a; --gold: #c5a059; --bronze: #cd7f32; }
         body { background-color: #f8fafc; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #333; }
         .hero-gradient { background: linear-gradient(135deg, var(--primary-blue) 0%, #2c5282 100%); }
-        
         .interactive-section { display: none; animation: fadeIn 0.5s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .active-section { display: block; }
-        
         .tab-btn { transition: all 0.3s ease; border-bottom: 2px solid transparent; }
-        .tab-btn:hover { color: var(--gold); }
         .tab-btn.active { color: var(--primary-blue); border-color: var(--gold); font-weight: bold; }
-
-        .pricing-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
     </style>
 </head>
 <body>
@@ -28,10 +22,6 @@
         <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">OPORTUNIDAD DE PATROCINIO</h1>
             <p class="text-2xl mb-6 text-blue-100 italic font-light">"Keiko en la Playa: Mística en el Caribe"</p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm mt-8">
-                <span class="bg-white/20 px-5 py-2.5 rounded-full shadow-inner"><i class="far fa-calendar-alt mr-2 text-gold"></i> 4 al 6 de diciembre, 2026</span>
-                <span class="bg-white/20 px-5 py-2.5 rounded-full shadow-inner"><i class="fas fa-map-marker-alt mr-2 text-gold"></i> Playa & Dojo, Margarita</span>
-            </div>
         </div>
     </header>
 
@@ -46,101 +36,67 @@
         <section id="evento" class="interactive-section active-section">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <h2 class="text-4xl font-extrabold text-blue-950 tracking-tight">Mística, Salud y Turismo</h2>
-                    <p class="text-xl text-gray-700 leading-relaxed">Bajo la tutela directa del <strong>Shihan Nelson Requena</strong>, este seminario reúne a practicantes de toda Venezuela para una experiencia inigualable que combina la disciplina marcial con la belleza natural de la isla.</p>
-                    <p class="text-lg text-gray-600">Buscamos aliados estratégicos para potenciar este encuentro que culmina con un **Keiko especial en la Playa**, un entrenamiento frente al mar Caribe.</p>
-                    <div class="flex items-center gap-4 pt-4">
-                        <span class="text-gold text-5xl font-bold">100+</span>
-                        <p class="text-gray-700">Practicantes y acompañantes esperados a nivel nacional.</p>
-                    </div>
+                    <h2 class="text-4xl font-extrabold text-blue-950 tracking-tight">Entrenamiento con Armas en la Arena</h2>
+                    <p class="text-xl text-gray-700 leading-relaxed">Este seminario nacional culmina con una práctica especial de <strong>Jo y Bokken</strong> frente al mar, combinando la precisión técnica con la energía del entorno natural.</p>
+                    <p class="text-lg text-gray-600">Su marca estará presente en un momento de gran impacto visual y emocional para todos los participantes.</p>
                 </div>
-                <div class="bg-white p-5 rounded-3xl shadow-xl border border-gray-100 text-center transform rotate-1">
-                    <img src="https://images.unsplash.com/photo-1599058917765-a780edf07a3e?auto=format&fit=crop&q=80&w=800" alt="Grupo de Aikido entrenando en la playa con bastones" class="rounded-2xl shadow-inner mb-4 object-cover h-96 w-full">
-                    <p class="text-sm italic text-gray-500">Energía y enfoque en el Keiko de Playa, Isla de Margarita.</p>
+                <div class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100">
+                    <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Entrenamiento Marcial en la playa" 
+                         class="rounded-2xl shadow-inner mb-2 object-cover h-80 w-full">
+                    <p class="text-xs text-center italic text-gray-500">Representación de la mística del Keiko en exteriores.</p>
                 </div>
             </div>
         </section>
 
         <section id="beneficios" class="interactive-section">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Ventajas Estratégicas</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
                     <i class="fas fa-users text-3xl text-gold mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Alcance Segmentado</h3>
-                    <p class="text-gray-600">Conexión con deportistas y turistas enfocados en bienestar y disciplina.</p>
+                    <h3 class="text-xl font-bold mb-2">Alcance Nacional</h3>
+                    <p class="text-gray-600">Presencia ante practicantes de dojos de todo el país.</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
-                    <i class="fas fa-chart-line text-3xl text-gold mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Visibilidad Digital</h3>
-                    <p class="text-gray-600">Presencia en nuestras redes y sitio oficial del seminario.</p>
+                    <i class="fas fa-camera text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Impacto Visual</h3>
+                    <p class="text-gray-600">Contenido fotográfico de alta calidad en la playa con su logo.</p>
                 </div>
                 <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
-                    <i class="fas fa-tshirt text-3xl text-gold mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Publicidad Móvil</h3>
-                    <p class="text-gray-600">Logo en el Kit oficial que los atletas usarán en sus dojos de origen.</p>
+                    <i class="fas fa-heart text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Valores</h3>
+                    <p class="text-gray-600">Asociación con disciplina, respeto y armonía (Aiki).</p>
                 </div>
             </div>
         </section>
 
         <section id="niveles" class="interactive-section">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Oportunidades de Inversión</h2>
             <div class="grid lg:grid-cols-3 gap-8">
-                <div class="pricing-card bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 border-yellow-500 p-8 flex flex-col">
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-yellow-500">
                     <h3 class="text-2xl font-bold text-blue-900">KAMI (Oro)</h3>
-                    <p class="text-gray-500 mb-4 italic">Lugar de Honor</p>
-                    <ul class="text-sm space-y-2 mb-6 flex-grow">
-                        <li>• Naming Rights del evento.</li>
-                        <li>• Logo central en Tatami y Playa.</li>
-                        <li>• Stand VIP en el evento.</li>
-                        <li>• Mención honorífica en Clausura.</li>
-                    </ul>
-                    <p class="font-bold text-center text-blue-950 bg-yellow-50 py-2 rounded-full">Consultar Monto</p>
+                    <p class="text-sm text-gray-500 mb-6 italic">Máxima Visibilidad</p>
+                    <p class="font-bold text-center bg-yellow-50 py-2 rounded-full">Consultar Monto</p>
                 </div>
-                <div class="pricing-card bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 border-gray-400 p-8 flex flex-col">
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-gray-400">
                     <h3 class="text-2xl font-bold text-blue-900">YUDANSHA (Plata)</h3>
-                    <p class="text-gray-500 mb-4 italic">Manga de la Franela</p>
-                    <ul class="text-sm space-y-2 mb-6 flex-grow">
-                        <li>• Stand comercial el sábado.</li>
-                        <li>• Logo en diploma oficial.</li>
-                        <li>• Presencia en zona de hidratación.</li>
-                        <li>• 2 menciones en redes sociales.</li>
-                    </ul>
-                    <p class="font-bold text-center text-blue-950 bg-gray-50 py-2 rounded-full">Consultar Monto</p>
+                    <p class="text-sm text-gray-500 mb-6 italic">Aliado Estratégico</p>
+                    <p class="font-bold text-center bg-gray-50 py-2 rounded-full">Consultar Monto</p>
                 </div>
-                <div class="pricing-card bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 border-orange-400 p-8 flex flex-col">
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-orange-400">
                     <h3 class="text-2xl font-bold text-blue-900">PURAVIDA (Bronce)</h3>
-                    <p class="text-gray-500 mb-4 italic">Fila de marcas</p>
-                    <ul class="text-sm space-y-2 mb-6 flex-grow">
-                        <li>• Publicidad en el Kit del atleta.</li>
-                        <li>• Logo en banner de playa.</li>
-                        <li>• 1 mención en redes sociales.</li>
-                        <li>• Logo en la web oficial.</li>
-                    </ul>
-                    <p class="font-bold text-center text-blue-950 bg-orange-50 py-2 rounded-full">Consultar Monto</p>
+                    <p class="text-sm text-gray-500 mb-6 italic">Colaborador</p>
+                    <p class="font-bold text-center bg-orange-50 py-2 rounded-full">Consultar Monto</p>
                 </div>
             </div>
         </section>
 
         <section id="contacto" class="interactive-section">
-            <div class="max-w-2xl mx-auto bg-white p-12 rounded-3xl shadow-2xl text-center border border-gray-100">
-                <i class="fas fa-handshake text-6xl text-gold mb-6"></i>
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">¿Listo para unirse como aliado técnico?</h2>
-                <p class="text-gray-600 mb-10">Contáctenos para personalizar una propuesta que se ajuste a los objetivos de su marca.</p>
-                <div class="space-y-5 mb-10 text-left inline-block">
-                    <p class="text-lg"><i class="fas fa-user text-gold mr-3 w-6 text-center"></i> <strong>Oney Clavijo</strong></p>
-                    <p class="text-lg"><i class="fab fa-whatsapp text-green-500 mr-3 w-6 text-center"></i> 0412.3585427</p>
-                    <p class="text-lg"><i class="far fa-envelope text-red-400 mr-3 w-6 text-center"></i> aikido.digital@gmail.com</p>
-                </div>
-                <div class="pt-6 border-t border-gray-100 mt-6 center">
-                    <a href="index.html" class="text-blue-900 underline text-sm hover:text-gold transition">← Volver a la página principal</a>
-                </div>
+            <div class="max-w-2xl mx-auto bg-white p-12 rounded-3xl shadow-2xl text-center">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">Inicie su Alianza</h2>
+                <p class="text-lg mb-8"><strong>Oney Clavijo</strong><br>0412.3585427<br>aikido.digital@gmail.com</p>
+                <a href="index.html" class="text-blue-900 underline text-sm">← Volver al inicio</a>
             </div>
         </section>
     </main>
-
-    <footer class="text-center py-8 text-gray-500 text-xs border-t border-gray-100 mt-12">
-        Dojo Nueva Esparta - Federación Venezolana de Aikido (FEVEAIKIDO)
-    </footer>
 
     <script>
         function showSection(sectionId) {
