@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Patrocinio - Aikido Margarita 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --primary-blue: #1a365d; --gold: #c5a059; }
+        body { background-color: #f8fafc; font-family: 'Segoe UI', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, var(--primary-blue) 0%, #2c5282 100%); }
+        .interactive-section { display: none; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .active-section { display: block; }
+        .tab-btn.active { background-color: var(--gold); color: white; border-color: var(--gold); }
+    </style>
+</head>
+<body>
+    <header class="hero-gradient text-white py-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">OPORTUNIDAD DE PATROCINIO</h1>
+            <p class="text-xl mb-6 text-blue-100 italic">"Mística del Budo en el Caribe"</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <span class="bg-white/20 px-4 py-2 rounded-full"><i class="far fa-calendar-alt mr-2"></i> 4 al 6 de diciembre, 2026</span>
+                <span class="bg-white/20 px-4 py-2 rounded-full"><i class="fas fa-map-marker-alt mr-2"></i> Playa & Dojo, Margarita</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+            <button onclick="showSection('evento')" id="btn-evento" class="tab-btn active px-6 py-2 rounded-full border border-gray-300 font-semibold transition">El Evento</button>
+            <button onclick="showSection('beneficios')" id="btn-beneficios" class="tab-btn px-6 py-2 rounded-full border border-gray-300 font-semibold transition">Beneficios</button>
+            <button onclick="showSection('niveles')" id="btn-niveles" class="tab-btn px-6 py-2 rounded-full border border-gray-300 font-semibold transition">Niveles</button>
+            <button onclick="showSection('contacto')" id="btn-contacto" class="tab-btn px-6 py-2 rounded-full border border-gray-300 font-semibold transition">Contacto</button>
+        </div>
+
+        <section id="evento" class="interactive-section active-section">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold text-blue-900">Un encuentro marcial y turístico</h2>
+                    <p class="text-lg">Bajo la tutela del <strong>Shihan Nelson Requena</strong>, reuniremos a practicantes de toda Venezuela para una experiencia que culmina con un <strong>Keiko en la Playa</strong>.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3"></i> Entrenamiento especial frente al mar.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3"></i> Proyección de marca a nivel nacional.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-lg border-2 border-gold text-center">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600" alt="Aikido en la Playa" class="rounded-lg shadow-md mb-4">
+                    <p class="text-sm italic text-gray-500">Energía y armonía en las costas de Margarita.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="interactive-section">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Ventajas Estratégicas</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
+                    <i class="fas fa-users text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Alcance Segmentado</h3>
+                    <p class="text-gray-600">Conexión con deportistas y turistas enfocados en bienestar y disciplina.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
+                    <i class="fas fa-chart-line text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Visibilidad Digital</h3>
+                    <p class="text-gray-600">Presencia en nuestras redes y sitio oficial del seminario.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
+                    <i class="fas fa-tshirt text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Publicidad Móvil</h3>
+                    <p class="text-gray-600">Logo en el Kit oficial que los atletas usarán en sus dojos de origen.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="niveles" class="interactive-section">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-10">Oportunidades de Inversión</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 border-yellow-500 p-8">
+                    <h3 class="text-2xl font-bold text-blue-900">KAMI (Oro)</h3>
+                    <p class="text-gray-500 mb-4 italic">Lugar de Honor</p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li>• Naming Rights del evento.</li>
+                        <li>• Logo central en Tatami y Playa.</li>
+                        <li>• Stand VIP en el evento.</li>
+                    </ul>
+                    <p class="font-bold text-center">Consultar Monto</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 border-gray-400 p-8">
+                    <h3 class="text-2xl font-bold text-blue-900">YUDANSHA (Plata)</h3>
+                    <p class="text-gray-500 mb-4 italic">Manga de la Franela</p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li>• Stand comercial el sábado.</li>
+                        <li>• Logo en diploma oficial.</li>
+                        <li>• Presencia en hidratación.</li>
+                    </ul>
+                    <p class="font-bold text-center">Consultar Monto</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-t-8 border-orange-400 p-8">
+                    <h3 class="text-2xl font-bold text-blue-900">PURAVIDA (Bronce)</h3>
+                    <p class="text-gray-500 mb-4 italic">Fila de marcas</p>
+                    <ul class="text-sm space-y-2 mb-6">
+                        <li>• Publicidad en el Kit del atleta.</li>
+                        <li>• Logo en banner de playa.</li>
+                        <li>• Mención en redes sociales.</li>
+                    </ul>
+                    <p class="font-bold text-center">Consultar Monto</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="interactive-section">
+            <div class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-2xl text-center">
+                <h2 class="text-3xl font-bold text-blue-900 mb-6">¿Listo para unirse?</h2>
+                <div class="space-y-4 mb-8">
+                    <p><i class="fas fa-user text-gold mr-2"></i> <strong>Oney Clavijo</strong></p>
+                    <p><i class="fab fa-whatsapp text-green-500 mr-2"></i> 0412.3585427</p>
+                    <p><i class="far fa-envelope text-red-400 mr-2"></i> aikido.digital@gmail.com</p>
+                </div>
+                <a href="index.html" class="text-blue-900 underline text-sm">← Volver a la página principal</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.interactive-section').forEach(s => s.classList.remove('active-section'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active-section');
+            document.getElementById('btn-' + sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
