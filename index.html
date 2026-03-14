@@ -88,4 +88,69 @@
             text-align: center; margin: 40px 0;
         }
         .presentado-por p { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-        .logo-pequeno { width
+        .logo-pequeno { width: 100px; height: auto; opacity: 0.9; }
+
+        @media (max-width: 600px) {
+            .schedule-item { flex-direction: column; }
+            .time { margin-bottom: 5px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="sensei.jpg" alt="Shihan Nelson Requena" class="foto-sensei">
+        <h1>Seminario Nacional de Aikido 2026</h1>
+        <div class="subtitle">Isla de Margarita - Dojo Nueva Esparta</div>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=pp_url&entry.117793497=Si&entry.863649477=Acepto&entry.1436785906=Acepto&entry.243143659=Acepto&entry.741312543=Acepto&entry.404434222=Acepto&entry.1800351506=Acepto" class="btn-registro">REGISTRARSE AHORA</a>
+    </div>
+
+    <div class="container">
+        
+        <div class="day-card">
+            <h2>Viernes 4 de Diciembre</h2>
+            <h3>Apertura y Mística</h3>
+            <div class="schedule-item"><span class="time">14:00 – 16:00</span><span class="activity">Recepción y entrega de Kits (Dulcería tradicional).</span></div>
+            <div class="schedule-item"><span class="time">16:00 – 17:00</span><span class="activity">Registro digital y acreditación.</span></div>
+            <div class="schedule-item"><span class="time">17:00 – 19:00</span><span class="activity"><strong>Sesión I:</strong> Apertura técnica en el Dojo.</span></div>
+        </div>
+
+        <div class="day-card">
+            <h2>Sábado 5 de Diciembre</h2>
+            <h3>Inmersión Técnica y Evaluación</h3>
+            <div class="schedule-item"><span class="time">07:30 – 08:30</span><span class="activity">Desayuno típico (Empanadas locales).</span></div>
+            <div class="schedule-item"><span class="time">09:00 – 12:00</span><span class="activity"><strong>Sesión II:</strong> Práctica intensiva (3h).</span></div>
+            <div class="schedule-item"><span class="time">12:00 – 14:00</span><span class="activity">Almuerzo y Networking.</span></div>
+            <div class="schedule-item"><span class="time">14:00 – 17:00</span><span class="activity"><strong>Sesión III y Exámenes:</strong> Práctica técnica y Exámenes de Grado en paralelo.</span></div>
+            <div class="schedule-item"><span class="time">20:30 – Cierre</span><span class="activity"><strong>Cena de Confraternidad:</strong> Encuentro social en La Asunción para estrechar vínculos.</span></div>
+        </div>
+
+        <div class="day-card">
+            <h2>Domingo 6 de Diciembre</h2>
+            <h3>Keiko en la Playa y Clausura</h3>
+            <div class="schedule-item"><span class="time">09:00 – 11:30</span><span class="activity"><strong>Keiko en la playa:</strong> Entrenamiento especial frente al mar.</span></div>
+            <div class="schedule-item"><span class="time">11:30 – 12:30</span><span class="activity">Protocolo de Clausura: Palabras del Shihan Nelson Requena y entrega de certificados.</span></div>
+            <div class="schedule-item"><span class="time">13:00</span><span class="activity">Fotografía oficial y despedida de delegaciones.</span></div>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="patrocinio.html" class="btn-secondary btn-patrocinio">¿QUIERES SER PATROCINANTE?</a>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=pp_url&entry.117793497=Si&entry.863649477=Acepto&entry.1436785906=Acepto&entry.243143659=Acepto&entry.741312543=Acepto&entry.404434222=Acepto&entry.1800351506=Acepto" class="btn-registro">REGISTRARSE AHORA</a>
+            
+            <a href="pss.html" class="btn-secondary" style="color: var(--verde-agua); border: 1px solid var(--verde-agua);">PROTOCOLO DE SEGURIDAD (PSS)</a>
+            <a href="reglas.html" class="btn-secondary" style="color: var(--bronce); border: 1px solid var(--bronce);">REGLAS DE CONVIVENCIA</a>
+            <a href="datos.html" style="color: #888; text-decoration: underline; font-size: 0.8rem;">Tratamiento de Datos Personales</a>
+        </div>
+
+        <div class="presentado-por">
+            <p>Presentado por</p>
+            <img src="logo-dojo.png" alt="Logo Dojo Nueva Esparta" class="logo-pequeno">
+        </div>
+
+    </div>
+
+</body>
+</html>
