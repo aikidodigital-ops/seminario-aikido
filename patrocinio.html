@@ -7,103 +7,80 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root { --primary-blue: #1a3a5a; --gold: #c5a059; --bronze: #cd7f32; }
-        body { background-color: #f8fafc; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #333; }
+        :root { --primary-blue: #1a3a5a; --gold: #c5a059; }
+        body { background-color: #f8fafc; font-family: 'Segoe UI', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, var(--primary-blue) 0%, #2c5282 100%); }
-        .interactive-section { display: none; animation: fadeIn 0.5s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .active-section { display: block; }
-        .tab-btn { transition: all 0.3s ease; border-bottom: 2px solid transparent; }
-        .tab-btn.active { color: var(--primary-blue); border-color: var(--gold); font-weight: bold; }
+        .interactive-section { display: none; }
+        .active-section { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .tab-btn.active { border-bottom: 3px solid var(--gold); color: var(--primary-blue); font-weight: bold; }
     </style>
 </head>
 <body>
     <header class="hero-gradient text-white py-16 px-6 text-center shadow-lg">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">OPORTUNIDAD DE PATROCINIO</h1>
-            <p class="text-2xl mb-6 text-blue-100 italic font-light">"Keiko en la Playa: Mística en el Caribe"</p>
-        </div>
+        <h1 class="text-4xl font-bold mb-2">OPORTUNIDAD DE PATROCINIO</h1>
+        <p class="text-xl italic text-blue-100">Keiko en la Playa - Margarita 2026</p>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 py-12">
-        <div class="flex flex-wrap justify-center gap-6 mb-16 border-b border-gray-200 pb-4">
-            <button onclick="showSection('evento')" id="btn-evento" class="tab-btn active px-4 py-2 text-lg text-gray-600">El Evento</button>
-            <button onclick="showSection('beneficios')" id="btn-beneficios" class="tab-btn px-4 py-2 text-lg text-gray-600">Beneficios</button>
-            <button onclick="showSection('niveles')" id="btn-niveles" class="tab-btn px-4 py-2 text-lg text-gray-600">Niveles</button>
-            <button onclick="showSection('contacto')" id="btn-contacto" class="tab-btn px-4 py-2 text-lg text-gray-600">Contacto</button>
+        <div class="flex justify-center gap-8 mb-12 border-b">
+            <button onclick="showSection('evento')" id="btn-evento" class="tab-btn active pb-2">El Evento</button>
+            <button onclick="showSection('beneficios')" id="btn-beneficios" class="tab-btn pb-2">Beneficios</button>
+            <button onclick="showSection('niveles')" id="btn-niveles" class="tab-btn pb-2">Niveles</button>
         </div>
 
         <section id="evento" class="interactive-section active-section">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-extrabold text-blue-950 tracking-tight">Entrenamiento con Armas en la Arena</h2>
-                    <p class="text-xl text-gray-700 leading-relaxed">Este seminario nacional culmina con una práctica especial de <strong>Jo y Bokken</strong> frente al mar, combinando la precisión técnica con la energía del entorno natural.</p>
-                    <p class="text-lg text-gray-600">Su marca estará presente en un momento de gran impacto visual y emocional para todos los participantes.</p>
+                <div>
+                    <h2 class="text-3xl font-bold text-blue-900 mb-6">Mística y Disciplina</h2>
+                    <p class="text-lg text-gray-700 mb-4">Un encuentro nacional que culmina con el **Keiko en la Playa**: entrenamiento técnico con **Jo y Bokken** (bastón y espada de madera) frente al mar Caribe.</p>
+                    <p class="text-gray-600">Bajo la dirección del Shihan Nelson Requena, proyectamos una experiencia de alto impacto visual y cultural.</p>
                 </div>
-                <div class="bg-white p-4 rounded-3xl shadow-xl border border-gray-100">
-                    <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                         alt="Entrenamiento Marcial en la playa" 
-                         class="rounded-2xl shadow-inner mb-2 object-cover h-80 w-full">
-                    <p class="text-xs text-center italic text-gray-500">Representación de la mística del Keiko en exteriores.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="beneficios" class="interactive-section">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
-                    <i class="fas fa-users text-3xl text-gold mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Alcance Nacional</h3>
-                    <p class="text-gray-600">Presencia ante practicantes de dojos de todo el país.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
-                    <i class="fas fa-camera text-3xl text-gold mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Impacto Visual</h3>
-                    <p class="text-gray-600">Contenido fotográfico de alta calidad en la playa con su logo.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-gold">
-                    <i class="fas fa-heart text-3xl text-gold mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Valores</h3>
-                    <p class="text-gray-600">Asociación con disciplina, respeto y armonía (Aiki).</p>
+                <div class="bg-white p-2 rounded-xl shadow-2xl border-4 border-gold">
+                    <img src="https://images.pexels.com/photos/4761779/pexels-photo-4761779.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                         alt="Entrenamiento Marcial con Armas de Madera" 
+                         class="rounded-lg w-full h-80 object-cover">
+                    <p class="text-center text-sm py-2 italic text-gray-500 font-bold">Keiko: El camino de la disciplina en la naturaleza.</p>
                 </div>
             </div>
         </section>
 
         <section id="niveles" class="interactive-section">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-yellow-500">
-                    <h3 class="text-2xl font-bold text-blue-900">KAMI (Oro)</h3>
-                    <p class="text-sm text-gray-500 mb-6 italic">Máxima Visibilidad</p>
-                    <p class="font-bold text-center bg-yellow-50 py-2 rounded-full">Consultar Monto</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-yellow-500 text-center">
+                    <h3 class="font-bold text-xl mb-4">KAMI (Oro)</h3>
+                    <p class="text-sm text-gray-600 mb-6">Naming Rights y máxima exposición en playa y tatami.</p>
+                    <span class="font-bold text-blue-900">Consultar Monto</span>
                 </div>
-                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-gray-400">
-                    <h3 class="text-2xl font-bold text-blue-900">YUDANSHA (Plata)</h3>
-                    <p class="text-sm text-gray-500 mb-6 italic">Aliado Estratégico</p>
-                    <p class="font-bold text-center bg-gray-50 py-2 rounded-full">Consultar Monto</p>
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-gray-400 text-center">
+                    <h3 class="font-bold text-xl mb-4">YUDANSHA (Plata)</h3>
+                    <p class="text-sm text-gray-600 mb-6">Presencia en kits, diplomas y zona de hidratación.</p>
+                    <span class="font-bold text-blue-900">Consultar Monto</span>
                 </div>
-                <div class="bg-white rounded-2xl shadow-xl p-8 border-t-8 border-orange-400">
-                    <h3 class="text-2xl font-bold text-blue-900">PURAVIDA (Bronce)</h3>
-                    <p class="text-sm text-gray-500 mb-6 italic">Colaborador</p>
-                    <p class="font-bold text-center bg-orange-50 py-2 rounded-full">Consultar Monto</p>
+                <div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-orange-400 text-center">
+                    <h3 class="font-bold text-xl mb-4">PURAVIDA (Bronce)</h3>
+                    <p class="text-sm text-gray-600 mb-6">Logo en banner de playa y mención en redes.</p>
+                    <span class="font-bold text-blue-900">Consultar Monto</span>
                 </div>
             </div>
         </section>
 
         <section id="contacto" class="interactive-section">
-            <div class="max-w-2xl mx-auto bg-white p-12 rounded-3xl shadow-2xl text-center">
-                <h2 class="text-3xl font-bold text-blue-900 mb-6">Inicie su Alianza</h2>
-                <p class="text-lg mb-8"><strong>Oney Clavijo</strong><br>0412.3585427<br>aikido.digital@gmail.com</p>
-                <a href="index.html" class="text-blue-900 underline text-sm">← Volver al inicio</a>
+            <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md mx-auto text-center">
+                <h2 class="text-2xl font-bold mb-4">Contacto de Alianzas</h2>
+                <p class="mb-2"><strong>Oney Clavijo</strong></p>
+                <p class="text-blue-600 font-bold mb-6">0412.3585427</p>
+                <a href="index.html" class="text-sm underline text-gray-500">Volver al inicio</a>
             </div>
         </section>
     </main>
 
     <script>
-        function showSection(sectionId) {
+        function showSection(id) {
             document.querySelectorAll('.interactive-section').forEach(s => s.classList.remove('active-section'));
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active-section');
-            document.getElementById('btn-' + sectionId).classList.add('active');
+            document.getElementById(id).classList.add('active-section');
+            document.getElementById('btn-' + id).classList.add('active');
         }
     </script>
 </body>
