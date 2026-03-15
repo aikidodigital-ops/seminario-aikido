@@ -23,16 +23,15 @@
             background: linear-gradient(rgba(26, 58, 90, 0.85), rgba(26, 58, 90, 0.85)), 
                         url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80'); 
             background-size: cover; background-position: center;
-            min-height: 65vh; display: flex; flex-direction: column; 
+            min-height: 60vh; display: flex; flex-direction: column; 
             justify-content: center; align-items: center; text-align: center; 
             color: white; padding: 40px 20px;
         }
 
-        .foto-sensei { 
-            width: 200px; height: 200px; margin-bottom: 20px; 
-            border-radius: 50%; border: 4px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
-            object-fit: cover;
+        .logo-aikido { 
+            width: 160px; height: auto; margin-bottom: 20px; 
+            border-radius: 50%; border: 4px solid var(--verde-agua);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); background-color: white;
         }
 
         h1 { font-size: 2.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
@@ -63,32 +62,36 @@
         .activity { flex-grow: 1; line-height: 1.4; }
 
         .nav-buttons {
-            display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px; padding-bottom: 20px;
+            display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px;
         }
 
         .btn-secondary {
-            background-color: transparent; padding: 12px 25px; border-radius: 50px; 
-            text-decoration: none; font-size: 0.9rem; font-weight: bold; 
-            transition: 0.3s; display: inline-block; width: 280px; text-align: center;
+            padding: 12px 25px; border-radius: 50px; text-decoration: none; 
+            font-size: 0.9rem; font-weight: bold; width: 280px; text-align: center; transition: 0.3s;
         }
 
-        /* Botón de Patrocinio con color destacado */
         .btn-patrocinio {
-            background-color: var(--oro-patrocinio);
-            color: white !important;
-            border: none !important;
-            box-shadow: 0 4px 12px rgba(246, 173, 85, 0.3);
-        }
-        .btn-patrocinio:hover {
-            background-color: var(--bronce);
-            transform: translateY(-2px);
+            background-color: var(--oro-patrocinio); color: white;
+            box-shadow: 0 4px 10px rgba(246, 173, 85, 0.4);
         }
 
-        .presentado-por {
-            text-align: center; margin: 40px 0;
+        /* ESTILO PARA EL LOGO-BOTÓN DE PATROCINADORES */
+        .sponsor-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            text-align: center;
         }
-        .presentado-por p { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-        .logo-pequeno { width: 100px; height: auto; opacity: 0.9; }
+        .sponsor-link:hover {
+            transform: scale(1.1);
+        }
+        .sponsor-link p {
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: var(--azul-profundo);
+            font-weight: bold;
+            text-decoration: underline;
+        }
 
         @media (max-width: 600px) {
             .schedule-item { flex-direction: column; }
@@ -100,11 +103,10 @@
 <body>
 
     <div class="hero">
-        <img src="sensei.jpg" alt="Shihan Nelson Requena" class="foto-sensei">
+        <img src="logo-dojo.png" alt="Dojo Nueva Esparta" class="logo-aikido">
         <h1>Seminario Nacional de Aikido 2026</h1>
-        <div class="subtitle">Isla de Margarita - Dojo Nueva Esparta</div>
-        
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=pp_url&entry.117793497=Si&entry.863649477=Acepto&entry.1436785906=Acepto&entry.243143659=Acepto&entry.741312543=Acepto&entry.404434222=Acepto&entry.1800351506=Acepto" class="btn-registro">REGISTRARSE AHORA</a>
+        <div class="subtitle">Isla de Margarita - Club CAGENE - La Asunción</div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=header" class="btn-registro">REGISTRARSE AHORA</a>
     </div>
 
     <div class="container">
@@ -112,45 +114,75 @@
         <div class="day-card">
             <h2>Viernes 4 de Diciembre</h2>
             <h3>Apertura y Mística</h3>
-            <div class="schedule-item"><span class="time">14:00 – 16:00</span><span class="activity">Recepción y entrega de Kits (Dulcería tradicional).</span></div>
-            <div class="schedule-item"><span class="time">16:00 – 17:00</span><span class="activity">Registro digital y acreditación.</span></div>
-            <div class="schedule-item"><span class="time">17:00 – 19:00</span><span class="activity"><strong>Sesión I:</strong> Apertura técnica en el Dojo.</span></div>
+            <div class="schedule-item">
+                <span class="time">14:00 – 16:00</span>
+                <span class="activity">Recepción de delegaciones y entrega de Kits de Bienvenida (Dulcería tradicional).</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">16:00 – 17:00</span>
+                <span class="activity">Registro digital y acreditación de participantes.</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">17:00 – 19:00</span>
+                <span class="activity"><strong>Sesión de Aikido I:</strong> Apertura técnica en el Dojo.</span>
+            </div>
         </div>
 
         <div class="day-card">
             <h2>Sábado 5 de Diciembre</h2>
             <h3>Inmersión Técnica y Evaluación</h3>
-            <div class="schedule-item"><span class="time">07:30 – 08:30</span><span class="activity">Desayuno típico (Empanadas locales).</span></div>
-            <div class="schedule-item"><span class="time">09:00 – 12:00</span><span class="activity"><strong>Sesión II:</strong> Práctica intensiva (3h).</span></div>
-            <div class="schedule-item"><span class="time">12:00 – 14:00</span><span class="activity">Almuerzo y Networking.</span></div>
-            <div class="schedule-item"><span class="time">14:00 – 17:00</span><span class="activity"><strong>Sesión III y Exámenes:</strong> Práctica técnica y Exámenes de Grado en paralelo.</span></div>
-            <div class="schedule-item"><span class="time">20:30 – Cierre</span><span class="activity"><strong>Cena de Confraternidad:</strong> Encuentro social en La Asunción para estrechar vínculos.</span></div>
+            <div class="schedule-item">
+                <span class="time">07:30 – 08:30</span>
+                <span class="activity">Desayuno típico (Empanadas locales).</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">09:00 – 12:00</span>
+                <span class="activity"><strong>Sesión de Aikido II:</strong> Práctica intensiva (3h).</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">12:00 – 14:00</span>
+                <span class="activity">Almuerzo y Networking en zona de stands comerciales.</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">14:00 – 17:00</span>
+                <span class="activity"><strong>Sesión de Aikido III y Exámenes:</strong> Práctica técnica y Exámenes de Grado en paralelo.</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">20:30 – Cierre</span>
+                <span class="activity"><strong>Cena de Confraternidad:</strong> Restaurant o local en La Asunción para fraternizar.</span>
+            </div>
         </div>
 
         <div class="day-card">
             <h2>Domingo 6 de Diciembre</h2>
             <h3>Keiko en la Playa y Clausura</h3>
-            <div class="schedule-item"><span class="time">09:00 – 11:30</span><span class="activity"><strong>Keiko en la playa:</strong> Entrenamiento especial frente al mar.</span></div>
-            <div class="schedule-item"><span class="time">11:30 – 12:30</span><span class="activity">Protocolo de Clausura: Palabras del Shihan Nelson Requena y entrega de certificados.</span></div>
-            <div class="schedule-item"><span class="time">13:00</span><span class="activity">Fotografía oficial y despedida de delegaciones.</span></div>
+            <div class="schedule-item">
+                <span class="time">09:00 – 11:30</span>
+                <span class="activity"><strong>Keiko en la Playa:</strong> Entrenamiento especial frente al mar con armas (Jo/Bokken).</span>
+            </div>
+            <div class="schedule-item">
+                <span class="time">11:30 – 13:00</span>
+                <span class="activity">Clausura: Palabras del Shihan Nelson Requena, entrega de certificados y foto oficial.</span>
+            </div>
         </div>
 
         <div class="nav-buttons">
             <a href="patrocinio.html" class="btn-secondary btn-patrocinio">¿QUIERES SER PATROCINANTE?</a>
-
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=pp_url&entry.117793497=Si&entry.863649477=Acepto&entry.1436785906=Acepto&entry.243143659=Acepto&entry.741312543=Acepto&entry.404434222=Acepto&entry.1800351506=Acepto" class="btn-registro">REGISTRARSE AHORA</a>
-            
             <a href="pss.html" class="btn-secondary" style="color: var(--verde-agua); border: 1px solid var(--verde-agua);">PROTOCOLO DE SEGURIDAD (PSS)</a>
             <a href="reglas.html" class="btn-secondary" style="color: var(--bronce); border: 1px solid var(--bronce);">REGLAS DE CONVIVENCIA</a>
-            <a href="datos.html" style="color: #888; text-decoration: underline; font-size: 0.8rem;">Tratamiento de Datos Personales</a>
+            <a href="datos.html" style="color: #bbb; text-decoration: underline; font-size: 0.8rem; margin-top: 5px;">Tratamiento de Datos Personales</a>
         </div>
 
-        <div class="presentado-por">
-            <p>Presentado por</p>
-            <img src="logo-dojo.png" alt="Logo Dojo Nueva Esparta" class="logo-pequeno">
+        <div style="text-align: center; margin-top: 60px; padding: 20px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <p style="font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;">Presentado a ustedes por</p>
+            
+            <a href="https://www.instagram.com/aikido.nuevaesparta/" target="_blank" class="sponsor-link">
+                <img src="logo-dojo.png" alt="Logo Dojo Nueva Esparta" style="width: 120px; height: auto; opacity: 1;">
+                <p><i class="fab fa-instagram"></i> Ver nuestro Instagram</p>
+            </a>
+            
+            <p style="font-size: 0.65rem; color: #aaa; margin-top: 15px;">Organización Aikikai Nueva Esparta</p>
         </div>
-
     </div>
-
 </body>
 </html>
