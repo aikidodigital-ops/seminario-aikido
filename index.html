@@ -40,7 +40,6 @@
         h1 { font-size: 2.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
         .subtitle { font-size: 1.2rem; color: var(--verde-agua); margin-bottom: 25px; font-weight: bold; }
 
-        /* AFILIACIONES INTERNACIONALES */
         .affiliations {
             display: flex;
             justify-content: center;
@@ -101,6 +100,15 @@
         .btn-patrocinio { background-color: var(--oro-patrocinio); color: white; box-shadow: 0 4px 10px rgba(246, 173, 85, 0.4); }
         .btn-datos { background-color: white; color: var(--gris-legal); border: 1px solid #ddd; }
 
+        .sponsor-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
         .sponsor-link {
             display: inline-block;
             text-decoration: none;
@@ -118,6 +126,7 @@
             .time { margin-bottom: 5px; }
             h1 { font-size: 1.8rem; }
             .aff-logo { height: 45px; }
+            .sponsor-group { gap: 20px; }
         }
     </style>
 </head>
@@ -178,15 +187,27 @@
             <a href="datos.html" class="btn-secondary btn-datos">TRATAMIENTO DE DATOS</a>
         </div>
 
-        <div style="text-align: center; margin-top: 60px; padding: 30px; background-color: white; border-radius: 20px; box-shadow: 0 5px 25px rgba(0,0,0,0.05);">
-            <p style="font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px;">Presentado a ustedes por</p>
+        <div style="text-align: center; margin-top: 60px; padding: 40px 20px; background-color: white; border-radius: 20px; box-shadow: 0 5px 25px rgba(0,0,0,0.05);">
+            <p style="font-size: 0.8rem; color: #888; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 1px;">Presentado a ustedes por</p>
             
-            <a href="https://www.instagram.com/aikido.nuevaesparta/" target="_blank" class="sponsor-link">
-                <img src="logo-dojo.png" alt="Logo Dojo Nueva Esparta" style="width: 120px; height: auto;">
-                <p><i class="fab fa-instagram"></i> Visitar nuestro Instagram</p>
-            </a>
+            <div class="sponsor-group">
+                <a href="https://www.instagram.com/moyagrill_mgta/" target="_blank" class="sponsor-link">
+                    <img src="logo-moya-grill.png" alt="Moya Grill" style="width: 100px; height: auto;">
+                    <p><i class="fab fa-instagram"></i> Moya Grill</p>
+                </a>
+
+                <a href="https://www.instagram.com/aikido.nuevaesparta/" target="_blank" class="sponsor-link">
+                    <img src="logo-dojo.png" alt="Logo Dojo Nueva Esparta" style="width: 120px; height: auto;">
+                    <p><i class="fab fa-instagram"></i> Dojo Nueva Esparta</p>
+                </a>
+
+                <a href="https://www.instagram.com/casalastrinitarias/" target="_blank" class="sponsor-link">
+                    <img src="logo-casa-trinitarias.png" alt="Casa las Trinitarias" style="width: 100px; height: auto;">
+                    <p><i class="fab fa-instagram"></i> Las Trinitarias</p>
+                </a>
+            </div>
             
-            <p style="font-size: 0.7rem; color: #aaa; margin-top: 20px;">Organización Aikikai Nueva Esparta</p>
+            <p style="font-size: 0.7rem; color: #aaa; margin-top: 30px;">Organización Aikikai Nueva Esparta</p>
         </div>
     </div>
 </body>
