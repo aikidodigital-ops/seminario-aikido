@@ -3,222 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propuesta de Alianza 2026 - Aikido Margarita</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Alianza Comercial 2026 - Aikido Margarita</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #1a365d;
-            --gold: #c5a059;
-            --accent-orange: #f6ad55;
+            --azul-profundo: #1a3a5a;
+            --verde-agua: #4db6ac;
+            --bronce: #cd7f32;
+            --blanco-hueso: #f4f4f4;
+            --oro-patrocinio: #f6ad55;
+            --gris-legal: #718096;
         }
-        body { background-color: #f8fafc; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #1a3a5a 0%, #2c5282 100%); }
-        .gold-border { border-left: 4px solid var(--gold); }
-        .interactive-section { display: none; }
-        .active-section { display: block; animation: fadeIn 0.6s ease-out; }
+
+        body, html { 
+            margin: 0; padding: 0; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background-color: var(--blanco-hueso); color: #333; 
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        .hero-patrocinio {
+            background: linear-gradient(rgba(26, 58, 90, 0.9), rgba(26, 58, 90, 0.9)), 
+                        url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center;
+            color: white; padding: 80px 20px; text-align: center;
+        }
+
+        .hero-patrocinio h1 { font-size: 2.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .hero-patrocinio p { font-size: 1.2rem; color: var(--verde-agua); font-weight: bold; }
+
+        /* Tabs Navigation */
+        .nav-tabs {
+            display: flex; justify-content: center; gap: 20px;
+            background: white; padding: 15px; position: sticky; top: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); z-index: 100;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none; border: none; padding: 10px 20px;
+            font-weight: bold; color: var(--gris-legal); cursor: pointer;
+            transition: 0.3s; border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn.active { color: var(--azul-profundo); border-bottom-color: var(--bronce); }
+
+        /* Sections */
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .content-section { display: none; animation: fadeIn 0.5s ease; }
+        .content-section.active { display: block; }
+
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .tab-btn { transition: all 0.3s ease; }
-        .tab-btn.active { color: var(--primary-blue); border-bottom: 3px solid var(--gold); font-weight: bold; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+
+        /* Cards and Grid */
+        .grid-levels {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px; margin-top: 30px;
+        }
+
+        .level-card {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--azul-profundo);
+            display: flex; flex-direction: column;
+        }
+
+        .level-header { padding: 20px; text-align: center; background: #f8fafc; }
+        .level-header h3 { margin: 0; color: var(--azul-profundo); font-size: 1.4rem; }
+        .level-price { font-size: 2rem; font-weight: bold; color: var(--bronce); margin: 10px 0; }
+
+        .level-body { padding: 25px; flex-grow: 1; }
+        .level-body ul { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #4a5568; }
+        .level-body li { margin-bottom: 12px; display: flex; gap: 10px; }
+        .level-body i { color: var(--verde-agua); margin-top: 3px; }
+
+        /* Highlight for Local Collaboration */
+        .local-collab { border-top-color: var(--oro-patrocinio); transform: scale(1.02); border: 2px solid var(--oro-patrocinio); }
+
+        .btn-contact {
+            display: block; width: 100%; padding: 15px; text-align: center;
+            background: var(--azul-profundo); color: white; text-decoration: none;
+            font-weight: bold; border-radius: 0 0 15px 15px; transition: 0.3s;
+        }
+        .btn-contact:hover { background: var(--verde-agua); }
+
+        .contact-footer {
+            background: white; padding: 40px; border-radius: 20px;
+            text-align: center; margin-top: 60px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero-patrocinio h1 { font-size: 1.8rem; }
+            .nav-tabs { gap: 5px; }
+            .tab-btn { font-size: 0.8rem; padding: 10px; }
+        }
     </style>
 </head>
 <body>
 
-    <header class="hero-gradient text-white py-20 px-6 text-center shadow-2xl">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight uppercase">Mística en el Caribe</h1>
-            <p class="text-xl md:text-2xl mb-8 text-blue-100 font-light leading-relaxed">
-                Únase al evento de Aikido más importante de Venezuela bajo la dirección del <br>
-                <span class="text-gold font-bold">Shihan Nelson Requena (7mo Dan Aikikai)</span>
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm">
-                <span class="bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20"><i class="far fa-calendar-alt mr-2"></i> 4-6 Diciembre 2026</span>
-                <span class="bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20"><i class="fas fa-map-marker-alt mr-2"></i> Isla de Margarita</span>
-            </div>
-        </div>
+    <header class="hero-patrocinio">
+        <h1>Alianza Comercial 2026</h1>
+        <p>Proyecte su marca en el evento de Aikido más importante del país</p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
+    <nav class="nav-tabs">
+        <button onclick="showSection('evento')" id="btn-evento" class="tab-btn active">EL SEMINARIO</button>
+        <button onclick="showSection('beneficios')" id="btn-beneficios" class="tab-btn">BENEFICIOS</button>
+        <button onclick="showSection('niveles')" id="btn-niveles" class="tab-btn">NIVELES DE INVERSIÓN</button>
+    </nav>
+
+    <div class="container">
         
-        <nav class="flex flex-wrap justify-center gap-4 md:gap-12 mb-16 border-b border-gray-200">
-            <button onclick="showSection('evento')" id="btn-evento" class="tab-btn active px-4 py-2 text-lg text-gray-500 hover:text-blue-900">El Seminario</button>
-            <button onclick="showSection('shihan')" id="btn-shihan" class="tab-btn px-4 py-2 text-lg text-gray-500 hover:text-blue-900">La Autoridad</button>
-            <button onclick="showSection('beneficios')" id="btn-beneficios" class="tab-btn px-4 py-2 text-lg text-gray-500 hover:text-blue-900">Beneficios</button>
-            <button onclick="showSection('niveles')" id="btn-niveles" class="tab-btn px-4 py-2 text-lg text-gray-500 hover:text-blue-900">Inversión</button>
-        </nav>
-
-        <section id="evento" class="interactive-section active-section">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-bold text-blue-950">Más que un deporte, <span class="text-gold">una experiencia.</span></h2>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        El Seminario Nacional de Aikido 2026 no es solo un entrenamiento; es un motor cultural y turístico para Nueva Esparta. Reunimos a delegaciones de todo el país en el <strong>Club CAGENE</strong> para 3 días de inmersión total.
+        <section id="evento" class="content-section active">
+            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--azul-profundo);">Mística en el Caribe</h2>
+                    <p style="line-height: 1.6; color: #4a5568;">
+                        El <strong>Seminario Nacional de Aikido 2026</strong> reunirá en La Asunción a más de 100 atletas y sus familias provenientes de Caracas, Valencia, Maracay y todo el país.
                     </p>
-                    <div class="bg-blue-50 p-6 rounded-xl gold-border">
-                        <h4 class="font-bold text-blue-900 mb-2">El Momento Cumbre: Keiko en la Playa</h4>
-                        <p class="text-gray-600 italic text-sm">
-                            El domingo, cerramos con una práctica ancestral de Jo (bastón) y Bokken (espada) sobre la arena blanca de Margarita. Una estampa de disciplina y paz que genera un impacto visual masivo en redes sociales.
-                        </p>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1518005020251-58296d8f8b80?auto=format&fit=crop&q=80&w=800" alt="Aikido Playa" class="rounded-3xl shadow-2xl transform rotate-2">
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs border-l-4 border-accent-orange">
-                        <p class="text-sm font-bold text-blue-900">"El escenario perfecto para que su marca sea recordada."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="shihan" class="interactive-section">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1 relative">
-                    <img src="shihan-nelson.png" alt="Shihan Nelson Requena" class="rounded-3xl shadow-2xl border-4 border-gold">
-                    <div class="absolute -bottom-4 -right-4 bg-blue-950 text-white px-6 py-2 rounded-lg text-sm font-bold shadow-xl">
-                        Shihan Nelson Requena - 7mo Dan Aikikai Japón
-                    </div>
-                </div>
-                <div class="space-y-6 order-1 md:order-2">
-                    <h2 class="text-4xl font-bold text-blue-950">Bajo la dirección del <span class="text-gold">Shihan Nelson Requena</span></h2>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Con el grado de <strong>7mo Dan Aikikai</strong>, el Shihan Requena es uno de los máximos exponentes del Aikido en Latinoamérica. Su presencia garantiza un evento de estándares internacionales.
+                    <p style="line-height: 1.6; color: #4a5568;">
+                        Bajo la dirección del <strong>Shihan Nelson Requena (7mo Dan)</strong>, este evento no es solo deportivo, sino un motor de turismo y cultura para Nueva Esparta.
                     </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-check-circle text-gold mt-1"></i>
-                            <span>Autoridad técnica reconocida por la Hombu Dojo de Japón.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-check-circle text-gold mt-1"></i>
-                            <span>Liderazgo en la Federación Venezolana de Aikido.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-check-circle text-gold mt-1"></i>
-                            <span>Un legado de décadas formando instructores de élite.</span>
-                        </li>
-                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="shihan-nelson.png" alt="Shihan Nelson Requena" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
             </div>
         </section>
 
-        <section id="beneficios" class="interactive-section">
-            <h2 class="text-3xl font-bold text-center text-blue-950 mb-12 italic">¿Por qué ser nuestro aliado estratégico?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl card-shadow border-t-4 border-gold text-center">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 text-gold text-2xl"><i class="fas fa-bullseye"></i></div>
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Target Premium</h3>
-                    <p class="text-gray-600 text-sm">Conecte con profesionales, empresarios y familias con alto poder adquisitivo que valoran el bienestar y la disciplina.</p>
+        <section id="beneficios" class="content-section">
+            <h2 style="text-align: center; color: var(--azul-profundo);">¿Por qué ser nuestro aliado?</h2>
+            <div class="grid-levels" style="margin-top: 40px;">
+                <div style="text-align: center; padding: 20px;">
+                    <i class="fas fa-bullseye" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
+                    <h4>Target Premium</h4>
+                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Conecte con profesionales y familias que valoran el bienestar y la disciplina.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl card-shadow border-t-4 border-gold text-center">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 text-gold text-2xl"><i class="fas fa-camera-retro"></i></div>
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Contenido Viral</h3>
-                    <p class="text-gray-600 text-sm">Su logo en el Keiko de Playa será capturado por fotógrafos profesionales, garantizando visibilidad orgánica en redes sociales.</p>
+                <div style="text-align: center; padding: 20px;">
+                    <i class="fas fa-camera-retro" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
+                    <h4>Contenido Viral</h4>
+                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Visibilidad orgánica en redes sociales a través de las fotos de los participantes.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl card-shadow border-t-4 border-gold text-center">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6 text-gold text-2xl"><i class="fas fa-award"></i></div>
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Responsabilidad Social</h3>
-                    <p class="text-gray-600 text-sm">Asocie su marca a los valores del Aikido: Armonía, resolución de conflictos sin violencia y paz social.</p>
+                <div style="text-align: center; padding: 20px;">
+                    <i class="fas fa-hands-helping" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
+                    <h4>Impacto Local</h4>
+                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Su aporte apoya directamente la logística e hidratación de los atletas.</p>
                 </div>
             </div>
         </section>
 
-        <section id="niveles" class="interactive-section">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border-2 border-gold relative transform scale-105">
-                    <div class="bg-gold text-white text-center py-4 font-bold uppercase tracking-widest text-sm">Nivel Kami (Oro)</div>
-                    <div class="p-8 space-y-6">
-                        <h3 class="text-3xl font-bold text-center text-blue-950">Aliado Principal</h3>
-                        <ul class="text-sm space-y-3 text-gray-700">
-                            <li><i class="fas fa-check text-gold mr-2"></i> <strong>Naming Rights:</strong> "Copa [Su Marca]"</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Banner central en Dojo y Playa</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Logo grande en la espalda del Kit</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Stand VIP y 5 menciones en tarima</li>
+        <section id="niveles" class="content-section">
+            <div class="grid-levels">
+                
+                <div class="level-card local-collab">
+                    <div class="level-header">
+                        <div style="background: var(--oro-patrocinio); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">COMERCIO LOCAL</div>
+                        <h3>Aporte de Colaboración</h3>
+                        <div class="level-price">$20</div>
+                    </div>
+                    <div class="level-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Banner Oficial:</strong> Logo en valla de 2x1m en CAGENE.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Directorio Web:</strong> Recomendado en bit.ly/seminario-aikido-2026.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Redes Sociales:</strong> Presencia en fotos compartidas a nivel nacional.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Afiche Nacional:</strong> Logo en pieza enviada a dojos de todo el país.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Mención:</strong> Agradecimiento en radio y tarima del evento.</span></li>
                         </ul>
-                        <button onclick="showSection('contacto')" class="w-full bg-blue-950 text-white py-3 rounded-full font-bold hover:bg-gold transition">Solicitar Dossier</button>
                     </div>
+                    <a href="https://wa.me/584123585427" class="btn-contact" style="background: var(--oro-patrocinio);">APOYAR AHORA</a>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 mt-4 md:mt-0">
-                    <div class="bg-gray-400 text-white text-center py-4 font-bold uppercase text-sm">Yudansha (Plata)</div>
-                    <div class="p-8 space-y-6">
-                        <h3 class="text-3xl font-bold text-center text-blue-950">Aliado Técnico</h3>
-                        <ul class="text-sm space-y-3 text-gray-700">
-                            <li><i class="fas fa-check text-gold mr-2"></i> Logo en diploma oficial</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Stand en zona comercial</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Logo en manga del Kit</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> 2 menciones en redes sociales</li>
+
+                <div class="level-card">
+                    <div class="level-header">
+                        <h3>Nivel PuraVida</h3>
+                        <div class="level-price">Consultar</div>
+                    </div>
+                    <div class="level-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Logo en banner de Playa.</li>
+                            <li><i class="fas fa-check-circle"></i> Publicidad dentro del Kit del atleta.</li>
+                            <li><i class="fas fa-check-circle"></i> 2 Menciones especiales en Instagram.</li>
                         </ul>
-                        <button onclick="showSection('contacto')" class="w-full border-2 border-blue-950 text-blue-950 py-3 rounded-full font-bold hover:bg-blue-950 hover:text-white transition text-sm">Consultar Beneficios</button>
                     </div>
+                    <a href="mailto:aikidodigital@gmail.com" class="btn-contact">MÁS INFORMACIÓN</a>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 mt-4 md:mt-0">
-                    <div class="bg-orange-400 text-white text-center py-4 font-bold uppercase text-sm">PuraVida (Bronce)</div>
-                    <div class="p-8 space-y-6">
-                        <h3 class="text-3xl font-bold text-center text-blue-950">Colaborador</h3>
-                        <ul class="text-sm space-y-3 text-gray-700">
-                            <li><i class="fas fa-check text-gold mr-2"></i> Logo en banner de Playa</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Logo en la web oficial</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Publicidad dentro del Kit</li>
-                            <li><i class="fas fa-check text-gold mr-2"></i> Mención en redes sociales</li>
+
+                <div class="level-card" style="border-top-color: var(--bronce);">
+                    <div class="level-header">
+                        <h3>Aliado Principal</h3>
+                        <div class="level-price">Consultar</div>
+                    </div>
+                    <div class="level-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <strong>Naming Rights:</strong> "Copa [Su Marca]".</li>
+                            <li><i class="fas fa-check-circle"></i> Logo grande en la espalda del Kit.</li>
+                            <li><i class="fas fa-check-circle"></i> Stand VIP y 5 menciones en tarima.</li>
                         </ul>
-                        <button onclick="showSection('contacto')" class="w-full border-2 border-blue-950 text-blue-950 py-3 rounded-full font-bold hover:bg-blue-950 hover:text-white transition text-sm">Más información</button>
                     </div>
+                    <a href="mailto:aikidodigital@gmail.com" class="btn-contact" style="background: var(--azul-profundo);">SOLICITAR DOSSIER</a>
                 </div>
-            </div>
-            
-            <div class="mt-20 text-center">
-                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Marcas que ya confían en nosotros</p>
-                <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition duration-500">
-                    <span class="text-xl font-extrabold text-blue-900">MOYA GRILL</span>
-                    <span class="text-xl font-extrabold text-blue-900">PURAVIDA MARGARITA</span>
-                    <span class="text-xl font-extrabold text-blue-900">CASA LAS TRINITARIAS</span>
-                </div>
+
             </div>
         </section>
 
-        <section id="contacto" class="interactive-section">
-            <div class="max-w-2xl mx-auto bg-white p-12 rounded-3xl shadow-2xl text-center border-t-8 border-gold">
-                <i class="fas fa-handshake text-6xl text-gold mb-8"></i>
-                <h2 class="text-4xl font-bold text-blue-950 mb-4">Inicie su alianza hoy</h2>
-                <p class="text-gray-600 mb-10 leading-relaxed">
-                    Estamos listos para diseñar una propuesta a la medida de sus objetivos de marca. Contáctenos directamente para concretar una reunión.
-                </p>
-                <div class="space-y-4 inline-block text-left mb-10">
-                    <div class="flex items-center gap-4 text-xl">
-                        <i class="fas fa-user-circle text-gold"></i>
-                        <strong>Lic. Oney Clavijo</strong>
-                    </div>
-                    <div class="flex items-center gap-4 text-xl">
-                        <i class="fab fa-whatsapp text-green-500"></i>
-                        <span>0412.3585427</span>
-                    </div>
-                    <div class="flex items-center gap-4 text-xl">
-                        <i class="far fa-envelope text-red-400"></i>
-                        <span>aikido.digital@gmail.com</span>
-                    </div>
-                </div>
-                <div class="pt-8 border-t">
-                    <a href="index.html" class="text-blue-900 font-bold hover:text-gold transition">← Volver al sitio del evento</a>
-                </div>
+        <div class="contact-footer">
+            <h2 style="color: var(--azul-profundo);">Inicie su alianza hoy</h2>
+            <p style="color: var(--gris-legal); margin-bottom: 30px;">Estamos listos para diseñar una propuesta a la medida de sus objetivos.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <span><i class="fab fa-whatsapp" style="color: #25d366;"></i> 0412.3585427</span>
+                <span><i class="far fa-envelope" style="color: #e53e3e;"></i> aikidodigital@gmail.com</span>
+                <span><i class="fas fa-user-circle"></i> Lic. Oney Clavijo</span>
             </div>
-        </section>
+            <div style="margin-top: 30px;">
+                <a href="index.html" style="color: var(--azul-profundo); font-weight: bold; text-decoration: none;"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+            </div>
+        </div>
 
-    </main>
+    </div>
 
-    <footer class="bg-blue-950 text-white py-12 px-6 text-center">
-        <p class="text-sm opacity-60">
-            Dojo Nueva Esparta - Organización Aikikai Nueva Esparta<br>
-            La Asunción - Isla de Margarita, Venezuela.
-        </p>
+    <footer style="text-align: center; padding: 40px; color: var(--gris-legal); font-size: 0.8rem;">
+        <p>Organización Aikikai Nueva Esparta &copy; 2026<br>La Asunción, Isla de Margarita, Venezuela.</p>
     </footer>
 
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.interactive-section').forEach(s => s.classList.remove('active-section'));
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active-section');
+            document.getElementById(sectionId).classList.add('active');
             document.getElementById('btn-' + sectionId).classList.add('active');
-            window.scrollTo({ top: 400, behavior: 'smooth' });
         }
     </script>
 </body>
