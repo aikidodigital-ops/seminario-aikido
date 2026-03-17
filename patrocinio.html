@@ -17,23 +17,40 @@
 
         body, html { 
             margin: 0; padding: 0; 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             background-color: var(--blanco-hueso); color: #333; 
             scroll-behavior: smooth;
-         
-        /* Hero Section - Con imagen de fondo sutil */
-        .hero {
-            background: linear-gradient(rgba(26, 58, 90, 0.9), rgba(26, 58, 90, 0.9)), 
+        }
+
+        /* Hero Section - Ajustado para optimizar visibilidad del contenido inferior */
+        .hero-patrocinio {
+            background: linear-gradient(rgba(26, 58, 90, 0.92), rgba(26, 58, 90, 0.92)), 
                         url('image-1.jpg'); 
             background-size: cover; 
             background-position: center;
-            min-height: 85vh; display: flex; flex-direction: column; 
-            justify-content: center; align-items: center; text-align: center; 
-            color: white; padding: 40px 20px;
+            min-height: 45vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: white; 
+            padding: 40px 20px;
         }
 
-        .hero-patrocinio h1 { font-size: 2.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-        .hero-patrocinio p { font-size: 1.2rem; color: var(--verde-agua); font-weight: bold; }
+        .hero-patrocinio h1 { 
+            font-size: 2.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin: 0 0 10px 0; 
+        }
+
+        .hero-patrocinio p { 
+            font-size: 1.2rem; 
+            color: var(--verde-agua); 
+            font-weight: bold; 
+            margin: 0;
+        }
 
         .nav-tabs {
             display: flex; justify-content: center; gap: 20px;
@@ -76,7 +93,6 @@
         .level-body li { margin-bottom: 15px; display: flex; gap: 10px; line-height: 1.4; }
         .level-body i { color: var(--verde-agua); margin-top: 3px; }
 
-        /* Estilos específicos por nivel */
         .level-colaborador { border-top-color: var(--oro-patrocinio); }
         .level-puravida { border-top-color: var(--verde-agua); transform: scale(1.03); z-index: 2; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .level-elite { border-top-color: var(--azul-profundo); }
@@ -123,101 +139,17 @@
                         El <strong>Seminario Nacional de Aikido 2026</strong> atrae a una audiencia selecta de atletas, profesionales y empresarios de las principales ciudades del país hacia la Isla de Margarita.
                     </p>
                     <p style="line-height: 1.6; color: #4a5568;">
-                        Contamos con el aval del <strong>Shihan Nelson Requena</strong> y una logística de primer nivel que incluye traslados privados, hospedaje premium y una causa social activa con @perritosudone.
+                        Contamos con el aval del <strong>Shihan Nelson Requena</strong> y una logística que incluye causa social activa con @perritosudone.
                     </p>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
-                    <img src="nelson-aikido.png" alt="Shihan Nelson Requena" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="nelson-aikido.jpg" alt="Shihan Nelson Requena" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
-            </div>
-        </section>
-
-        <section id="beneficios" class="content-section">
-            <h2 style="text-align: center; color: var(--azul-profundo);">¿Por qué ser nuestro aliado?</h2>
-            <div class="grid-levels" style="margin-top: 40px;">
-                <div style="text-align: center; padding: 20px;">
-                    <i class="fas fa-gem" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
-                    <h4>Prestigio y Valores</h4>
-                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Asocie su marca con la disciplina, el respeto y la armonía del Aikido tradicional.</p>
-                </div>
-                <div style="text-align: center; padding: 20px;">
-                    <i class="fas fa-users" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
-                    <h4>Audiencia de Calidad</h4>
-                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Acceso directo a un grupo demográfico con alto poder adquisitivo y conciencia de salud.</p>
-                </div>
-                <div style="text-align: center; padding: 20px;">
-                    <i class="fas fa-dog" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
-                    <h4>Responsabilidad Social</h4>
-                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Su marca apoya la causa de @perritosudone, generando empatía y conexión emocional.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="niveles" class="content-section">
-            <div class="grid-levels">
-                
-                <div class="level-card level-colaborador">
-                    <div class="level-header">
-                        <div style="background: var(--oro-patrocinio); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">IMPULSO LOCAL</div>
-                        <h3>Colaborador</h3>
-                        <div class="level-price">$20</div>
-                    </div>
-                    <div class="level-body">
-                        <ul>
-                            <li><i class="fas fa-check"></i> <span>Logo en <strong>Banner Oficial</strong> (Valla 2x1m) en el Dojo sede.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Presencia en el <strong>Afiche Nacional</strong> digital y físico.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Mención de agradecimiento en el cierre del evento.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Link en directorio de aliados de la web oficial.</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/584123585427" class="btn-contact" style="background: var(--oro-patrocinio);">APOYAR AHORA</a>
-                </div>
-
-                <div class="level-card level-puravida">
-                    <div class="level-header">
-                        <div style="background: var(--verde-agua); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">MÁS POPULAR</div>
-                        <h3>Aliado PuraVida</h3>
-                        <div class="level-price">$50</div>
-                    </div>
-                    <div class="level-body">
-                        <ul>
-                            <li><i class="fas fa-check"></i> <span><strong>Logo en Manga/Espalda</strong> de la Franela Oficial del evento.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Material POP:</strong> Inserción de su publicidad dentro del Kit del Atleta.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Banner Individual:</strong> Espacio para colocar su propio banner en el área de práctica.</span></li>
-                            <li><i class="fas fa-check"></i> <span>2 Post dedicados en Instagram agradeciendo la alianza.</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/584123585427" class="btn-contact" style="background: var(--verde-agua);">ELEGIR ESTE PLAN</a>
-                </div>
-
-                <div class="level-card level-elite">
-                    <div class="level-header">
-                        <div style="background: var(--azul-profundo); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">MÁXIMA VISIBILIDAD</div>
-                        <h3>Patrocinante Élite</h3>
-                        <div class="level-price">$100</div>
-                    </div>
-                    <div class="level-body">
-                        <ul>
-                            <li><i class="fas fa-check"></i> <span><strong>Posición de Honor:</strong> Logo en el PECHO de la Franela Oficial.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Naming Rights:</strong> "Presentado por [Su Marca]" en comunicaciones oficiales.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Stand Comercial:</strong> Espacio exclusivo para exhibición de productos/servicios.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Menciones prioritarias por megafonía durante todo el seminario.</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/584123585427" class="btn-contact">SOLICITAR EXCLUSIVIDAD</a>
-                </div>
-
             </div>
         </section>
 
         <div class="contact-footer">
             <h2 style="color: var(--azul-profundo);">Construyamos esta alianza</h2>
-            <p style="color: var(--gris-legal); margin-bottom: 30px;">Su apoyo es fundamental para el éxito de este encuentro nacional.</p>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <span><i class="fab fa-whatsapp" style="color: #25d366;"></i> 0412.3585427</span>
-                <span><i class="far fa-envelope" style="color: #e53e3e;"></i> aikidodigital@gmail.com</span>
-                <span><i class="fas fa-user-circle"></i> Lic. Oney Clavijo</span>
-            </div>
             <div style="margin-top: 30px;">
                 <a href="index.html" style="color: var(--azul-profundo); font-weight: bold; text-decoration: none;"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
             </div>
