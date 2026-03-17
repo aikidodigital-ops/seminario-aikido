@@ -22,11 +22,12 @@
             scroll-behavior: smooth;
         }
         
-        /* Hero Section */
+        /* Hero Section Actualizada con image-1.jpg */
         .hero {
-            background: linear-gradient(rgba(26, 58, 90, 0.9), rgba(26, 58, 90, 0.9)), 
-                        url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80'); 
-            background-size: cover; background-position: center;
+            background: linear-gradient(rgba(26, 58, 90, 0.75), rgba(26, 58, 90, 0.75)), 
+                        url('image-1.jpg'); 
+            background-size: cover; 
+            background-position: center;
             min-height: 85vh; display: flex; flex-direction: column; 
             justify-content: center; align-items: center; text-align: center; 
             color: white; padding: 40px 20px;
@@ -41,7 +42,6 @@
         h1 { font-size: 2.8rem; margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
         .hero-tagline { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.9; }
 
-        /* Botones de Navegación Rápida */
         .nav-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 12px; width: 100%; max-width: 1000px; margin-top: 30px;
@@ -63,7 +63,6 @@
         }
         .btn-main-cta:hover { background: white; transform: scale(1.05); }
 
-        /* Sección Instructor */
         .instructor-section { padding: 80px 20px; background: white; }
         .instructor-content { max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
         .instructor-text { flex: 1; min-width: 320px; }
@@ -71,7 +70,6 @@
         .instructor-text h3 { color: var(--bronce); margin-top: 0; margin-bottom: 20px; font-weight: 400; }
         .instructor-text p { line-height: 1.8; color: #555; font-size: 1.05rem; }
 
-        /* Tabla de Paquetes */
         .packages-section { padding: 80px 20px; background: #f0f4f8; }
         .table-container { 
             max-width: 1100px; margin: 0 auto; overflow-x: auto; 
@@ -87,7 +85,6 @@
         .cross { color: #e53e3e; opacity: 0.3; }
         .highlight-row { background: #fffaf0; font-weight: bold; color: var(--bronce); }
 
-        /* Banner Perritos UDONE (Versión Discreta) */
         .social-cause-lite {
             background: #fff; border: 1px solid #e2e8f0; padding: 20px;
             border-radius: 12px; margin: 40px auto; max-width: 800px;
@@ -99,7 +96,6 @@
         .social-cause-lite p { font-size: 0.9rem; color: #718096; margin: 0; line-height: 1.4; }
         .social-cause-lite b { color: var(--azul-profundo); }
 
-        /* Sponsors */
         .sponsors-footer { padding: 80px 20px; text-align: center; background: white; border-top: 1px solid #eee; }
         .sponsor-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
         .sponsor-item img { height: 60px; filter: grayscale(100%); opacity: 0.6; transition: 0.4s; }
@@ -117,11 +113,11 @@
 <body>
 
     <header class="hero">
-        <img src="sensei.jpg" alt="Shihan Nelson Requena" class="foto-sensei-principal">
+        <img src="shihan-nelson.jpg" alt="Shihan Nelson Requena" class="foto-sensei-principal">
         <h1>Margarita Aikido 2026</h1>
         <p class="hero-tagline">Seminario Nacional con el Shihan Nelson Requena</p>
         
-        <a href="https://docs.google.com/forms/..." target="_blank" class="btn-main-cta">
+        <a href="https://docs.google.com/forms/e/1FAIpQLSdmztHof0jojYtW_DFdtBYom3GN1W9r0MU_oouW0aezDfTv8Q/viewform?usp=header" target="_blank" class="btn-main-cta">
             INSCRIBIRSE AHORA
         </a>
 
@@ -143,7 +139,7 @@
                 <p>Figura central del Aikido en Venezuela y Latinoamérica. Con más de 40 años de trayectoria, el Shihan Requena es reconocido por su rigor técnico y su compromiso con los valores del Budo tradicional. Su enseñanza se centra en la fluidez del movimiento y el estudio profundo del Aiki-Ken y Aiki-Jo (armas).</p>
                 <p>Esta es una oportunidad única para practicar con uno de los maestros más influyentes de la región en el marco incomparable de la Isla de Margarita.</p>
             </div>
-            <img src="nelson-aikido.jpg" alt="Shihan Nelson Requena en práctica" style="width: 320px; height: 400px; border-radius: 10px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <img src="nelson-aikido.png" alt="Shihan Nelson Requena en práctica" style="width: 320px; height: 400px; border-radius: 10px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
         </div>
     </section>
 
