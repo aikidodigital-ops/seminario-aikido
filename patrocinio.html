@@ -20,13 +20,16 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
             background-color: var(--blanco-hueso); color: #333; 
             scroll-behavior: smooth;
-        }
-
-        .hero-patrocinio {
+         
+        /* Hero Section - Con imagen de fondo sutil */
+        .hero {
             background: linear-gradient(rgba(26, 58, 90, 0.9), rgba(26, 58, 90, 0.9)), 
-                        url('https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80');
-            background-size: cover; background-position: center;
-            color: white; padding: 80px 20px; text-align: center;
+                        url('image-1.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            min-height: 85vh; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; text-align: center; 
+            color: white; padding: 40px 20px;
         }
 
         .hero-patrocinio h1 { font-size: 2.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
