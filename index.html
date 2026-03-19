@@ -70,7 +70,6 @@
         .instructor-text h3 { color: var(--bronce); margin-top: 0; margin-bottom: 20px; font-weight: 400; }
         .instructor-text p { line-height: 1.8; color: #555; font-size: 1.05rem; }
 
-        /* Estilos de la tabla restaurados */
         .packages-section { padding: 80px 20px; background: #f0f4f8; }
         .table-container { 
             max-width: 1100px; margin: 0 auto; overflow-x: auto; 
@@ -86,7 +85,6 @@
         .cross { color: #e53e3e; opacity: 0.3; }
         .highlight-row { background: #fffaf0; font-weight: bold; color: var(--bronce); }
 
-        /* Estilos Perritos y Footer restaurados */
         .social-cause-lite {
             background: #fff; border: 1px solid #e2e8f0; padding: 20px;
             border-radius: 12px; margin: 40px auto; max-width: 800px;
@@ -94,14 +92,16 @@
             text-decoration: none; transition: 0.3s;
         }
         .social-cause-lite:hover { border-color: var(--verde-agua); background: #fcfdfd; }
-        .social-cause-lite img { height: 50px; border-radius: 50%; filter: grayscale(20%); }
+        .social-cause-lite img { height: 50px; border-radius: 50%; }
         .social-cause-lite p { font-size: 0.9rem; color: #718096; margin: 0; line-height: 1.4; }
         .social-cause-lite b { color: var(--azul-profundo); }
 
         .sponsors-footer { padding: 80px 20px; text-align: center; background: white; border-top: 1px solid #eee; }
         .sponsor-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
-        .sponsor-item img { height: 60px; filter: grayscale(100%); opacity: 0.6; transition: 0.4s; }
-        .sponsor-item img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+        
+        /* Logos en Full Color por solicitud */
+        .sponsor-item img { height: 60px; transition: 0.4s; }
+        .sponsor-item img:hover { transform: scale(1.1); }
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
@@ -236,6 +236,11 @@
             <div class="sponsor-item">
                 <a href="https://www.instagram.com/aikido.ulaiaf/" target="_blank">
                     <img src="logo-ulaiaf.png" alt="ULAIAF">
+                </a>
+            </div>
+            <div class="sponsor-item">
+                <a href="https://www.instagram.com/aikikaivenezuela/" target="_blank">
+                    <img src="logo-venezuela-aikikai.png" alt="Aikikai Venezuela">
                 </a>
             </div>
             <div class="sponsor-item">
