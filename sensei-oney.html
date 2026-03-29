@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensei Oney Clavijo | Aikido Aikikai Authority Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-black: #0a0a0a;
+            --pure-white: #ffffff;
+            --institutional-red: #b91c1c;
+            --stone-gray: #4b5563;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--deep-black);
+            color: var(--pure-white);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            /* Se ha actualizado la imagen de fondo a oney.png */
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 1)), url('oney.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .lineage-card {
+            border-left: 2px solid var(--institutional-red);
+            transition: all 0.3s ease;
+        }
+
+        .lineage-card:hover {
+            background-color: #1a1a1a;
+            transform: translateX(10px);
+        }
+
+        .cta-button {
+            background-color: var(--institutional-red);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #991b1b;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-card {
+            border-bottom: 1px solid rgba(185, 28, 28, 0.3);
+            padding-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="flex items-center gap-4">
+            <div class="text-xl font-bold tracking-tighter uppercase">
+                <span class="text-red-600">Aikido</span> Aikikai
+            </div>
+            <a href="index.html" class="hidden md:block text-[10px] uppercase tracking-widest border border-white/20 px-3 py-1 hover:bg-white/10 transition">
+                Volver al Dojo
+            </a>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#inicio" class="hover:text-red-500 transition">Inicio</a>
+            <a href="#linaje" class="hover:text-red-500 transition">Linaje</a>
+            <a href="#filosofia" class="hover:text-red-500 transition">Filosofía</a>
+            <a href="#contacto" class="hover:text-red-500 transition">Contacto</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-gradient min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-5xl text-center">
+            <div class="inline-block px-4 py-1 border border-red-600 text-red-600 text-xs tracking-[0.3em] uppercase mb-8">
+                Tradición • Resiliencia • Maestría
+            </div>
+            <h1 class="text-5xl md:text-8xl mb-6 leading-tight">
+                La Persistencia del <span class="italic text-gray-400">Espíritu</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+                Preservando la pureza técnica del Aikido Aikikai contra toda adversidad. Bajo la instrucción del <span class="text-white font-semibold">Sensei Oney Clavijo, 3er Dan</span>.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/584123585427?text=Hola%20Sensei%20Oney%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20clases%20de%20Aikido%20en%20el%20Dojo%20Nueva%20Esparta." class="cta-button px-10 py-5 text-sm uppercase tracking-[0.2em] font-bold rounded-sm w-full md:w-auto">
+                    Solicitar instrucción técnica
+                </a>
+            </div>
+            <p class="mt-8 text-gray-500 text-sm italic tracking-widest">Discípulo del linaje Requena-García.</p>
+        </div>
+    </section>
+
+    <section id="linaje" class="py-24 px-6 bg-[#050505]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl mb-8">Un Camino <span class="text-red-600">Ininterrumpido</span></h2>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Desde mis inicios en <strong>2005</strong>, mi vida ha sido un testimonio de lealtad al Shugyo (entrenamiento intensivo). En el Aikikai, la técnica no es un producto de consumo, es una herencia sagrada que se protege.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Como alumno del <strong>Sensei Eduardo García (6to Dan)</strong> y formado bajo la influencia del <strong>Shihan Nelson Requena (7mo Dan)</strong>, mi misión no es masificar, sino transmitir la técnica exacta a quienes poseen la voluntad de aprender.
+                    </p>
+                    <p class="text-gray-500 italic">
+                        "El grado es un papel; la técnica es el alma. Aquí entrenamos el alma."
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="lineage-card p-8 glass-panel">
+                        <h3 class="text-xl font-bold mb-2">Shihan Nelson Requena</h3>
+                        <p class="text-red-600 text-sm uppercase tracking-widest mb-4">7mo Dan Aikikai</p>
+                        <p class="text-gray-500 text-sm">Pilar técnico del cual emana nuestra disciplina y rigor.</p>
+                    </div>
+                    <div class="lineage-card p-8 glass-panel">
+                        <h3 class="text-xl font-bold mb-2">Sensei Eduardo García</h3>
+                        <p class="text-red-600 text-sm uppercase tracking-widest mb-4">6to Dan Aikikai</p>
+                        <p class="text-gray-500 text-sm">Transmisor directo de la maestría y la precisión en el tatami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl mb-6">Instrucción <span class="italic text-gray-500">Personalizada</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">En un mundo que busca la gratificación rápida, nosotros elegimos la profundidad. No somos una fábrica de grados; somos un grupo selecto de practicantes dedicados a la excelencia técnica.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="stat-card">
+                    <div class="text-4xl font-bold text-red-700 serif mb-2">19+ Años</div>
+                    <p class="text-sm uppercase tracking-widest font-semibold mb-3">De Práctica Constante</p>
+                    <p class="text-gray-500 text-sm">Casi dos décadas de estudio profundo desde el primer paso en el tatami en 2005.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="text-4xl font-bold text-red-700 serif mb-2">Grupo Selecto</div>
+                    <p class="text-sm uppercase tracking-widest font-semibold mb-3">Atención Directa</p>
+                    <p class="text-gray-500 text-sm">Entrenamiento de alta fidelidad donde cada detalle técnico es corregido personalmente por el Sensei.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="text-4xl font-bold text-red-700 serif mb-2">Rigor Aikikai</div>
+                    <p class="text-sm uppercase tracking-widest font-semibold mb-3">Estándar Internacional</p>
+                    <p class="text-gray-500 text-sm">Aunque los tiempos exijan paciencia para los grados, la calidad técnica nunca se negocia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="filosofia" class="py-24 px-6 bg-white text-black">
+        <div class="max-w-4xl mx-auto text-center">
+            <blockquote class="text-3xl md:text-5xl italic serif mb-12 leading-tight">
+                "El Aikido no es para corregir a los demás, sino para corregir nuestra propia mente."
+            </blockquote>
+            <div class="w-20 h-1 bg-red-600 mx-auto mb-12"></div>
+            <p class="text-xl md:text-2xl font-light leading-relaxed max-w-2xl mx-auto">
+                Entendemos que el camino es difícil y las circunstancias externas son duras. Por eso, el Dojo es nuestro refugio de disciplina, honor y superación personal.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-[#0a0a0a]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl mb-12 text-center uppercase tracking-widest">¿Por qué entrenar con nosotros?</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse glass-panel">
+                    <thead>
+                        <tr class="border-b border-white/20 bg-white/5">
+                            <th class="p-6 text-sm uppercase tracking-widest font-bold">Concepto</th>
+                            <th class="p-6 text-sm uppercase tracking-widest font-bold">Lo que el practicante desarrolla</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-white/10 hover:bg-white/5 transition">
+                            <td class="p-6 font-semibold text-red-500">Enseñanza Directa</td>
+                            <td class="p-6 text-gray-300">Corrección inmediata y detallada. Sin intermediarios, directo del Sensei.</td>
+                        </tr>
+                        <tr class="border-b border-white/10 hover:bg-white/5 transition">
+                            <td class="p-6 font-semibold text-red-500">Resiliencia Mental</td>
+                            <td class="p-6 text-gray-300">Entrenamiento diseñado para fortalecer el carácter ante las dificultades de la vida diaria.</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition">
+                            <td class="p-6 font-semibold text-red-500">Pureza Técnica</td>
+                            <td class="p-6 text-gray-300">Fidelidad absoluta a los principios del Aikikai, sin atajos ni adulteraciones.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 px-6 text-center border-t border-white/10">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-6xl mb-8 italic serif">Únete a la práctica</h2>
+            <p class="text-gray-400 mb-12 text-lg">
+                Buscamos personas comprometidas con su crecimiento. El costo no debe ser una barrera para el espíritu; hablemos sobre cómo puedes iniciar tu camino.
+            </p>
+            <div class="inline-block glass-panel p-8 rounded-lg w-full max-w-md">
+                <p class="text-xl mb-4 font-bold">Contacto Directo con Sensei Oney</p>
+                <p class="text-gray-500 mb-8 italic">Sesiones de entrenamiento en La Asunción</p>
+                
+                <div class="flex flex-col gap-4">
+                    <a href="https://wa.me/584123585427?text=Hola%20Sensei%20Oney%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20clases%20de%20Aikido%20en%20el%20Dojo%20Nueva%20Esparta." class="cta-button flex items-center justify-center gap-3 px-8 py-5 text-sm uppercase tracking-[0.2em] font-bold rounded-sm hover:scale-105 transition">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.406.836 2.946 1.277 4.524 1.277h.005c5.454 0 9.894-4.439 9.897-9.895.002-2.644-1.029-5.129-2.903-7.005-1.873-1.875-4.359-2.907-7.004-2.908-5.456 0-9.896 4.44-9.898 9.896-.001 1.738.455 3.434 1.321 4.935l-1.018 3.715 3.804-.997zm11.378-5.111c-.302-.151-1.785-.881-2.061-.981-.277-.1-.478-.151-.68.151-.202.302-.782.981-.957 1.182-.175.201-.351.226-.654.076-.303-.151-1.278-.47-2.434-1.499-.899-.802-1.506-1.792-1.682-2.094-.175-.302-.019-.465.132-.614.136-.134.303-.352.454-.528.151-.177.202-.302.303-.503.101-.201.05-.377-.025-.528-.075-.151-.68-1.634-.932-2.238-.245-.589-.496-.51-.68-.52l-.579-.011c-.201 0-.528.075-.803.377-.277.301-1.056 1.03-1.056 2.514s1.081 2.915 1.232 3.116c.151.201 2.127 3.248 5.153 4.554.719.311 1.281.497 1.719.637.722.23 1.379.197 1.898.12.579-.085 1.785-.73 2.037-1.435.251-.704.251-1.307.176-1.432-.075-.126-.277-.201-.579-.352z"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="mailto:aikidodigital@gmail.com" class="text-gray-500 hover:text-white transition text-xs uppercase tracking-widest">O contactar por Email</a>
+                </div>
+            </div>
+            <div class="mt-12">
+                <a href="index.html" class="text-gray-600 hover:text-red-500 transition text-sm uppercase tracking-widest flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Inicio del Dojo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 bg-black text-center text-gray-600 text-xs border-t border-white/5">
+        <p>&copy; 2024 Dojo Nueva Esparta. Preservando el legado técnico del Aikido Aikikai en Venezuela.</p>
+    </footer>
+
+</body>
+</html>
