@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminario Nacional de Aikido - Margarita 2026 - Seminario Nacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Seminario Nacional de Aikido - Margarita 2026 | Planes para Acompañantes</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -13,6 +13,14 @@
             --blanco-hueso: #f4f4f4;
             --oro-patrocinio: #f6ad55;
             --gris-suave: #edf2f7;
+            --highlight-companion: #fef9e3;
+            --highlight-border: #f9c74f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body, html { 
@@ -22,9 +30,9 @@
             scroll-behavior: smooth;
         }
         
-        /* Hero Section - Con imagen de fondo sutil */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(26, 58, 90, 0.9), rgba(26, 58, 90, 0.9)), 
+            background: linear-gradient(rgba(26, 58, 90, 0.92), rgba(26, 58, 90, 0.92)), 
                         url('image-1.jpg'); 
             background-size: cover; 
             background-position: center;
@@ -60,6 +68,7 @@
             padding: 20px 60px; font-size: 1.3rem; font-weight: 800;
             border-radius: 50px; text-decoration: none; transition: 0.3s;
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            display: inline-block;
         }
         .btn-main-cta:hover { background: white; transform: scale(1.05); }
 
@@ -72,18 +81,58 @@
 
         .packages-section { padding: 80px 20px; background: #f0f4f8; }
         .table-container { 
-            max-width: 1100px; margin: 0 auto; overflow-x: auto; 
-            background: white; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            max-width: 1300px; margin: 0 auto; overflow-x: auto; 
+            background: white; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
         }
         
-        table { width: 100%; border-collapse: collapse; min-width: 900px; }
-        th { background: var(--azul-profundo); color: white; padding: 25px 15px; text-align: center; }
-        td { padding: 18px 15px; border-bottom: 1px solid #edf2f7; text-align: center; font-size: 0.9rem; }
-        .feature-name { text-align: left; font-weight: 600; padding-left: 30px; color: #4a5568; }
+        table { width: 100%; border-collapse: collapse; min-width: 1100px; font-size: 0.85rem; }
+        th { background: var(--azul-profundo); color: white; padding: 22px 12px; text-align: center; font-weight: 700; }
+        td { padding: 16px 12px; border-bottom: 1px solid #edf2f7; text-align: center; vertical-align: middle; }
+        .feature-name { text-align: left; font-weight: 700; padding-left: 25px; color: #2d3748; background-color: #fafbfe; font-size: 0.9rem; }
         
-        .check { color: #38a169; font-weight: bold; font-size: 1.1rem; }
-        .cross { color: #e53e3e; opacity: 0.3; }
-        .highlight-row { background: #fffaf0; font-weight: bold; color: var(--bronce); }
+        .check { color: #2c7a4d; font-weight: bold; font-size: 1.1rem; }
+        .cross { color: #cbd5e0; opacity: 0.6; font-size: 1rem; }
+        .highlight-row { background: #fffaf0; font-weight: 600; }
+        
+        /* Estilos para destacar las nuevas columnas de acompañantes */
+        .col-companion {
+            background: var(--highlight-companion) !important;
+            border-left: 3px solid var(--highlight-border);
+            border-right: 3px solid var(--highlight-border);
+        }
+        th.col-companion {
+            background: #e8b86b !important;
+            color: #1e2f3e;
+            border-bottom: 3px solid #d48f3b;
+            position: relative;
+        }
+        th.col-companion i, th.col-companion .emoji-badge {
+            font-size: 1.2rem;
+            margin-right: 6px;
+        }
+        td.col-companion {
+            background: #fffef7 !important;
+        }
+        .new-badge {
+            background: #ff9f1c;
+            color: #1e2f3e;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+        .price-note {
+            font-size: 0.7rem;
+            font-weight: normal;
+            display: block;
+            color: #f9eec1;
+        }
+        th.col-companion .price-note {
+            color: #2c3e2f;
+        }
 
         .social-cause-lite {
             background: #fff; border: 1px solid #e2e8f0; padding: 20px;
@@ -98,16 +147,27 @@
 
         .sponsors-footer { padding: 80px 20px; text-align: center; background: white; border-top: 1px solid #eee; }
         .sponsor-grid { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; align-items: center; margin-top: 40px; }
-        
-        /* Logos en Full Color por solicitud */
         .sponsor-item img { height: 60px; transition: 0.4s; }
         .sponsor-item img:hover { transform: scale(1.1); }
+
+        .info-tiered {
+            max-width: 1100px;
+            margin: 20px auto 0 auto;
+            background: #eef2fa;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #1a3a5a;
+        }
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             .instructor-content { text-align: center; justify-content: center; }
             .instructor-text { text-align: center; }
             .nav-grid { grid-template-columns: 1fr 1fr; }
+            th, td { padding: 12px 6px; font-size: 0.75rem; }
+            .feature-name { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -147,82 +207,119 @@
     </section>
 
     <section id="paquetes" class="packages-section">
-        <h2 style="text-align:center; color: var(--azul-profundo); font-size: 2rem;">Inscripción Anticipada (Early Bird)</h2>
-        <p style="text-align:center; margin-bottom: 50px; color: #666;">Selecciona el plan que mejor se adapte a tu experiencia. Tarifa de Lanzamiento (Early Bird) hasta el 6 de Junio.</p>
+        <h2 style="text-align:center; color: var(--azul-profundo); font-size: 2rem;">🎯 Inscripción Anticipada (Early Bird)</h2>
+        <p style="text-align:center; margin-bottom: 20px; color: #666;">Selecciona el plan que mejor se adapte a tu experiencia. Tarifa de Lanzamiento (Early Bird) vigente hasta el 6 de Junio.</p>
+        <p style="text-align:center; margin-bottom: 40px; background: #e9ecef; display: inline-block; padding: 6px 18px; border-radius: 40px; font-size: 0.85rem; margin-left: auto; margin-right: auto; width: fit-content;">
+            <i class="fas fa-users"></i> ¡Nuevos planes para ACOMPAÑANTES! Hospedaje + transporte + experiencias
+        </p>
         
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Beneficios</th>
-<th>KEIKO <br> <small><del>€75</del> €55</small></th>
-<th>BUDO <br> <small><del>€95</del> €70</small></th>
-<th>GOURMET <br> <small><del>€120</del> €85</small></th>
-<th>AVENTURA <br> <small><del>€145</del> €110</small></th>
-<th>PREMIUM <br> <small><del>€190</del> €145</small></th>
+                        <th>Beneficios / Planes</th>
+                        <th>KEIKO <br><small><del>€75</del> €55</small></th>
+                        <th>BUDO <br><small><del>€95</del> €70</small></th>
+                        <th>GOURMET <br><small><del>€120</del> €85</small></th>
+                        <th>AVENTURA <br><small><del>€145</del> €110</small></th>
+                        <th>PREMIUM <br><small><del>€190</del> €145</small></th>
+                        <!-- NUEVAS COLUMNAS: ACOMPAÑANTES destacadas -->
+                        <th class="col-companion"><i class="fas fa-hotel"></i> 👥 ACOMP. ECONÓMICO <span class="new-badge">NUEVO</span><br><small class="price-note"><del>€80</del>€60 Early Bird</small></th>
+                        <th class="col-companion"><i class="fas fa-crown"></i> 🌟 ACOMP. VIP <span class="new-badge">NUEVO</span><br><small class="price-note"><del>€125</del>€95 Early Bird</small></th>
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Acceso Seminario (solo participantes, acompañantes NO) -->
                     <tr>
-                        <td class="feature-name">Acceso Total al Seminario (3 días)</td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
+                        <td class="feature-name">🥋 Acceso Total al Seminario (3 días)</td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i> Sin acceso</td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i> Sin acceso</td>
                     </tr>
+                    <!-- Certificado Oficial -->
                     <tr>
-                        <td class="feature-name">Certificado de Participación Oficial</td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
+                        <td class="feature-name">📜 Certificado de Participación Oficial</td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i> No aplica</td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i> No aplica</td>
                     </tr>
+                    <!-- Franela edición limitada -->
                     <tr>
-                        <td class="feature-name">Franela Edición Limitada de Colección</td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
+                        <td class="feature-name">👕 Franela Edición Limitada de Colección</td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i></td>
                     </tr>
+                    <!-- Gastronomía local Sábado (Desayuno + Almuerzo) -->
                     <tr>
-                        <td class="feature-name">Gastronomia Local Deliciosa (Sáb: Des/Alm)</td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
+                        <td class="feature-name">🍽️ Gastronomía Local Deliciosa (Sáb: Desayuno + Almuerzo)</td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="col-companion cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="col-companion check"><i class="fas fa-check-circle"></i> Incluida</td>
                     </tr>
+                    <!-- Hospedaje en posada con piscina (2 noches) -->
                     <tr>
-                        <td class="feature-name">Hospedaje en posada con piscina (2 Noches)</td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="check">Econ.</td>
+                        <td class="feature-name">🏨 Hospedaje en posada con piscina (2 Noches)</td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="check">Económica</td>
                         <td class="check">VIP</td>
+                        <td class="col-companion check"><i class="fas fa-check-circle"></i> Económica (con piscina)</td>
+                        <td class="col-companion check"><i class="fas fa-check-circle"></i> VIP (con piscina)</td>
                     </tr>
+                    <!-- Transporte seguro -->
                     <tr>
-                        <td class="feature-name">Transporte Seguro y Confortable</td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="cross"><i class="fas fa-times"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
-                        <td class="check"><i class="fas fa-check"></i></td>
+                        <td class="feature-name">🚐 Transporte Seguro y Confortable (puntos del evento)</td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="cross"><i class="fas fa-times-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="check"><i class="fas fa-check-circle"></i></td>
+                        <td class="col-companion check"><i class="fas fa-check-circle"></i> Incluido</td>
+                        <td class="col-companion check"><i class="fas fa-check-circle"></i> Incluido (Premium)</td>
                     </tr>
+                    <!-- Fila destacada: Aporte social a perritos UDONE -->
                     <tr class="highlight-row">
-                        <td class="feature-name">Tu Aporte Amoroso a Perritos UDONE</td>
-                        <td colspan="5">INCLUIDO EN TODOS LOS PLANES</td>
+                        <td class="feature-name">🐾 Tu Aporte Amoroso a Perritos UDONE</td>
+                        <td colspan="7" style="text-align: center; background: #fdf8e7;">✅ INCLUIDO EN TODOS LOS PLANES (Participantes + Acompañantes) ✅</td>
                     </tr>
+                    <!-- Información adicional: Cena de Confraternidad (sábado noche) - detalle extra para acompañantes VIP/económico? según PDF, todos los acompañantes disfrutan infraestructura y actividades sociales, pero la cena es para todos los participantes/acompañantes? El PDF menciona "Cena de Confraternidad el sábado por la noche", la incluimos como plus general -->
+                    <tr>
                 </tbody>
             </table>
         </div>
 
+        
         <a href="https://www.instagram.com/perritosudone/" target="_blank" class="social-cause-lite">
             <img src="logo-perritos.png" alt="Perritos UDONE">
-            <p><b>Compromiso Social:</b> Por cada inscripción, destinamos €1 al rescate animal a través de la fundación @perritosudone.</p>
+            <p><b>Compromiso Social:</b> Por cada inscripción (incluyendo acompañantes), destinamos <strong>€1 Euro</strong> al rescate animal a través de la fundación <strong>@perritosudone</strong>. ¡Tú participación ayuda!</p>
         </a>
+
+        <!-- Breve justificación visual para acompañantes (sin abrumar) -->
+        <div style="max-width: 1100px; margin: 30px auto 0 auto; background: white; border-radius: 24px; padding: 20px 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border-left: 6px solid var(--verde-agua);">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between;">
+                <div><i class="fas fa-users" style="font-size: 2rem; color: var(--azul-profundo);"></i></div>
+                <div style="flex:1"><strong>✨ ¿Viajas con familia o amistades?</strong> Los planes <strong>Acompañante Económico y VIP</strong> están diseñados exclusivamente para quienes NO participan en las sesiones técnicas, pero desean disfrutar del hospedaje, piscina, transporte seguro y la magia de Margarita. Incluyen 2 noches en posada (categoría económica o VIP) y traslados confiables. El plan VIP añade la experiencia gastronómica del sábado (desayuno+almuerzo local).</div>
+                <div><i class="fas fa-umbrella-beach" style="font-size: 2rem; color: #cd7f32;"></i></div>
+            </div>
+        </div>
     </section>
 
     <footer class="sponsors-footer">
@@ -268,6 +365,7 @@
         <div style="margin-top: 60px; border-top: 1px solid #f1f1f1; padding-top: 30px;">
             <p style="font-size: 0.8rem; color: #718096; margin-bottom: 5px;">&copy; 2026 Organización Aikikai Nueva Esparta. La Asunción, Isla de Margarita.</p>
             <a href="datos.html" style="font-size: 0.75rem; color: var(--verde-agua); text-decoration: none;">Política de Privacidad y Datos</a>
+            <p style="font-size: 0.7rem; margin-top: 10px;">📌 Los precios de los planes están en Euros. Planes sujetos a disponibilidad de hospedaje.</p>
         </div>
     </footer>
 
