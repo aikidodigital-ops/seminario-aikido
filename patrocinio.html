@@ -2,10 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alianza Comercial 2026 - Aikido Margarita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Alianza Comercial 2026 - Aikido Margarita | Patrocina el Seminario Nacional</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
             --azul-profundo: #1a3a5a;
             --verde-agua: #4db6ac;
@@ -13,106 +19,262 @@
             --blanco-hueso: #f4f4f4;
             --oro-patrocinio: #f6ad55;
             --gris-legal: #718096;
+            --sombra-suave: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+            --transition: all 0.25s ease;
         }
 
-        body, html { 
-            margin: 0; padding: 0; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-            background-color: var(--blanco-hueso); color: #333; 
-            scroll-behavior: smooth;
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--blanco-hueso);
+            color: #1e293b;
+            line-height: 1.5;
         }
 
-        /* Hero Section - Estética heredada de index.html */
+        /* Hero mejorado */
         .hero-patrocinio {
-            background: linear-gradient(rgba(26, 58, 90, 0.9), rgba(26, 58, 90, 0.9)), 
+            background: linear-gradient(135deg, rgba(26, 58, 90, 0.92), rgba(26, 58, 90, 0.88)), 
                         url('image-1.jpg'); 
             background-size: cover; 
-            background-position: center;
-            min-height: 60vh; 
+            background-position: center 30%;
+            min-height: 55vh; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
             align-items: center; 
             text-align: center; 
             color: white; 
-            padding: 40px 20px;
+            padding: 3rem 1.5rem;
+            position: relative;
         }
 
         .hero-patrocinio h1 { 
             font-size: 2.8rem; 
             text-transform: uppercase; 
-            letter-spacing: 2px; 
-            margin: 0 0 10px 0; 
+            letter-spacing: 3px; 
+            margin: 0 0 0.75rem 0;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .hero-patrocinio p { 
-            font-size: 1.2rem; 
+            font-size: 1.3rem; 
             color: var(--verde-agua); 
-            font-weight: bold; 
+            font-weight: 600; 
             margin: 0;
+            background: rgba(0,0,0,0.3);
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            backdrop-filter: blur(2px);
         }
 
+        /* Navegación sticky */
         .nav-tabs {
-            display: flex; justify-content: center; gap: 20px;
-            background: white; padding: 15px; position: sticky; top: 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); z-index: 100;
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            background: white;
+            padding: 0.8rem 1.5rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+            z-index: 100;
             flex-wrap: wrap;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .tab-btn {
-            background: none; border: none; padding: 10px 20px;
-            font-weight: bold; color: var(--gris-legal); cursor: pointer;
-            transition: 0.3s; border-bottom: 3px solid transparent;
+            background: none;
+            border: none;
+            padding: 0.6rem 1.8rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--gris-legal);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 40px;
+            letter-spacing: 0.3px;
         }
 
-        .tab-btn.active { color: var(--azul-profundo); border-bottom-color: var(--bronce); }
+        .tab-btn.active {
+            color: var(--azul-profundo);
+            background: #eef2ff;
+            box-shadow: inset 0 -1px 0 var(--bronce);
+            border-bottom: 2px solid var(--bronce);
+            border-radius: 40px 40px 0 0;
+        }
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .content-section { display: none; animation: fadeIn 0.5s ease; }
-        .content-section.active { display: block; }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto 3rem;
+            padding: 0 1.5rem;
+        }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .content-section {
+            display: none;
+            animation: fadeInUp 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
 
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Tarjetas de niveles */
         .grid-levels {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; margin-top: 30px; align-items: stretch;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 1rem;
+            align-items: stretch;
         }
 
         .level-card {
-            background: white; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--gris-legal);
-            display: flex; flex-direction: column; transition: 0.3s;
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--sombra-suave);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            border-top: 5px solid #cbd5e1;
         }
 
-        .level-header { padding: 25px; text-align: center; background: #f8fafc; }
-        .level-header h3 { margin: 0; color: var(--azul-profundo); font-size: 1.4rem; }
-        .level-price { font-size: 2rem; font-weight: bold; color: var(--bronce); margin: 10px 0; }
-
-        .level-body { padding: 25px; flex-grow: 1; }
-        .level-body ul { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #4a5568; }
-        .level-body li { margin-bottom: 15px; display: flex; gap: 10px; line-height: 1.4; }
-        .level-body i { color: var(--verde-agua); margin-top: 3px; }
+        .level-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
+        }
 
         .level-colaborador { border-top-color: var(--oro-patrocinio); }
-        .level-puravida { border-top-color: var(--verde-agua); transform: scale(1.03); z-index: 2; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .level-puravida { border-top-color: var(--verde-agua); transform: scale(1.02); z-index: 2; }
         .level-elite { border-top-color: var(--azul-profundo); }
 
-        .btn-contact {
-            display: block; width: 100%; padding: 18px; text-align: center;
-            background: var(--azul-profundo); color: white; text-decoration: none;
-            font-weight: bold; border-radius: 0 0 15px 15px; transition: 0.3s;
+        .level-header {
+            padding: 1.6rem 1.2rem;
+            text-align: center;
+            background: #fafcff;
+            border-bottom: 1px solid #edf2f7;
         }
-        .btn-contact:hover { opacity: 0.9; }
 
+        .badge-plan {
+            background: #e9ecef;
+            color: #2d3748;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        .level-header h3 {
+            margin: 0.5rem 0 0.25rem;
+            font-size: 1.6rem;
+            color: var(--azul-profundo);
+        }
+
+        .level-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--bronce);
+            margin: 0.5rem 0 0;
+        }
+
+        .level-body {
+            padding: 1.6rem;
+            flex-grow: 1;
+        }
+
+        .level-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .level-body li {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            font-size: 0.92rem;
+            color: #2c3e50;
+        }
+
+        .level-body i.fa-check-circle, 
+        .level-body i.fa-check {
+            color: var(--verde-agua);
+            font-size: 1.1rem;
+            margin-top: 0.1rem;
+        }
+
+        .btn-contact-wa {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            background: var(--azul-profundo);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-contact-wa i {
+            margin-right: 8px;
+        }
+
+        .btn-contact-wa:hover {
+            background: #0f2c44;
+            filter: brightness(1.02);
+        }
+
+        /* sección contacto final */
         .contact-footer {
-            background: white; padding: 40px; border-radius: 20px;
-            text-align: center; margin-top: 60px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            background: white;
+            padding: 2.2rem;
+            border-radius: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: var(--sombra-suave);
+            border: 1px solid rgba(0,0,0,0.03);
         }
 
-        @media (max-width: 768px) {
-            .hero-patrocinio h1 { font-size: 1.8rem; }
+        .contact-footer h2 {
+            font-size: 1.7rem;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .contact-item {
+            background: #f8fafc;
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            font-weight: 500;
+        }
+
+        /* responsive */
+        @media (max-width: 780px) {
+            .hero-patrocinio h1 { font-size: 1.9rem; }
             .grid-levels { grid-template-columns: 1fr; }
             .level-puravida { transform: none; }
+            .level-header h3 { font-size: 1.4rem; }
+            .nav-tabs { gap: 0.5rem; }
+            .tab-btn { padding: 0.4rem 1rem; font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -131,127 +293,161 @@
 
     <div class="container">
         
+        <!-- SECCIÓN 1: EVENTO -->
         <section id="evento" class="content-section active">
-            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <h2 style="color: var(--azul-profundo);">Un Alcance Nacional</h2>
-                    <p style="line-height: 1.6; color: #4a5568;">
-                        El <strong>Seminario Nacional de Aikido 2026</strong> atrae a una audiencia selecta de atletas, profesionales y empresarios de las principales ciudades del país hacia la Isla de Margarita.
+            <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; background: white; border-radius: 1.5rem; padding: 1.8rem; box-shadow: var(--sombra-suave);">
+                <div style="flex: 1; min-width: 260px;">
+                    <h2 style="color: var(--azul-profundo); margin-bottom: 0.5rem;">Alcance nacional · resonancia regional</h2>
+                    <p style="line-height: 1.5; color: #2d3e50;">
+                        El <strong>Seminario Nacional de Aikido 2026</strong> reunirá a practicantes, maestros y empresarios de todo el país en la Isla de Margarita. 
+                        Una audiencia selecta, comprometida con la disciplina, el bienestar y el liderazgo.
                     </p>
-                    <p style="line-height: 1.6; color: #4a5568;">
-                        Contamos con el aval del <strong>Shihan Nelson Requena</strong> y una logística de primer nivel que incluye traslados privados, hospedaje premium y una causa social activa con @perritosudone.
+                    <p style="margin-top: 1rem; line-height: 1.5;">
+                        Avalado por <strong>Shihan Nelson Requena</strong> y con logística premium: traslados privados, hospedaje de primer nivel y 
+                        una causa social aliada con <strong>@perritosudone</strong>. Su marca será parte de una experiencia transformadora.
                     </p>
                 </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <img src="nelson-aikido.png" alt="Shihan Nelson Requena" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div style="flex: 1; min-width: 240px; text-align: center;">
+                    <img src="nelson-aikido.png" alt="Shihan Nelson Requena - Aikido Margarita" style="max-width: 100%; border-radius: 28px; box-shadow: 0 12px 28px rgba(0,0,0,0.12); background: #eef2ff;">
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN 2: BENEFICIOS DE MARCA -->
         <section id="beneficios" class="content-section">
-            <h2 style="text-align: center; color: var(--azul-profundo);">¿Por qué ser nuestro aliado?</h2>
-            <div class="grid-levels" style="margin-top: 40px;">
-                <div style="text-align: center; padding: 20px;">
-                    <i class="fas fa-gem" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
-                    <h4>Prestigio y Valores</h4>
-                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Asocie su marca con la disciplina, el respeto y la armonía del Aikido tradicional.</p>
+            <h2 style="text-align: center; color: var(--azul-profundo); margin-bottom: 1rem;">¿Por qué ser nuestro aliado?</h2>
+            <div class="grid-levels" style="margin-top: 1rem;">
+                <div style="background: white; border-radius: 1.2rem; padding: 1.8rem; text-align: center; box-shadow: var(--sombra-suave);">
+                    <i class="fas fa-gem" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 1rem;"></i>
+                    <h4 style="font-size: 1.3rem;">Prestigio y Valores</h4>
+                    <p style="color: var(--gris-legal);">Asocie su marca con la disciplina, el respeto y la armonía del Aikido tradicional. Posicionamiento auténtico.</p>
                 </div>
-                <div style="text-align: center; padding: 20px;">
-                    <i class="fas fa-users" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
-                    <h4>Audiencia de Calidad</h4>
-                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Acceso directo a un grupo demográfico con alto poder adquisitivo y conciencia de salud.</p>
+                <div style="background: white; border-radius: 1.2rem; padding: 1.8rem; text-align: center; box-shadow: var(--sombra-suave);">
+                    <i class="fas fa-chart-line" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 1rem;"></i>
+                    <h4 style="font-size: 1.3rem;">Audiencia de Calidad</h4>
+                    <p style="color: var(--gris-legal);">Acceso directo a profesionales, emprendedores y familias con alto poder adquisitivo y conciencia deportiva.</p>
                 </div>
-                <div style="text-align: center; padding: 20px;">
-                    <i class="fas fa-dog" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 15px;"></i>
-                    <h4>Responsabilidad Social</h4>
-                    <p style="font-size: 0.9rem; color: var(--gris-legal);">Su marca apoya la causa de @perritosudone, generando empatía y conexión emocional.</p>
+                <div style="background: white; border-radius: 1.2rem; padding: 1.8rem; text-align: center; box-shadow: var(--sombra-suave);">
+                    <i class="fas fa-paw" style="font-size: 2.5rem; color: var(--bronce); margin-bottom: 1rem;"></i>
+                    <h4 style="font-size: 1.3rem;">Responsabilidad Social</h4>
+                    <p style="color: var(--gris-legal);">Su apoyo a @perritosudone genera empatía y conexión emocional genuina con la comunidad.</p>
                 </div>
             </div>
         </section>
 
+        <!-- SECCIÓN 3: NIVELES DE INVERSIÓN + LINKS CON MENSAJE PREDEFINIDO -->
         <section id="niveles" class="content-section">
             <div class="grid-levels">
                 
+                <!-- Plan Colaborador Local -->
                 <div class="level-card level-colaborador">
                     <div class="level-header">
-                        <div style="background: var(--oro-patrocinio); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">IMPULSO LOCAL</div>
+                        <div class="badge-plan" style="background: #fee2e2; color: #b45309;">IMPULSO LOCAL</div>
                         <h3>Colaborador local</h3>
-                        <div class="level-price">$20</div>
+                        <div class="level-price">$20 USD</div>
                     </div>
                     <div class="level-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> <span>Logo en <strong>Banner Oficial</strong> (Valla 2x1m) en el Dojo sede.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Presencia en el <strong>Afiche Nacional</strong> digital y físico.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Mención de agradecimiento en el cierre del evento.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Link en directorio de aliados de la web oficial.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Logo en <strong>Banner Oficial</strong> (valla 2x1m) en el Dojo sede.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Presencia en el <strong>Afiche Nacional</strong> digital y físico.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Mención de agradecimiento en cierre del evento.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Link en directorio de aliados web oficial.</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/584123585427" class="btn-contact" style="background: var(--oro-patrocinio);">APOYAR AHORA</a>
+                    <!-- Enlace WhatsApp con mensaje predefinido para Colaborador local -->
+                    <a href="https://wa.me/584123585427?text=Hola%2C%20vengo%20de%20la%20secci%C3%B3n%20de%20PATROCINIO%20de%20Aikido%20Margarita.%20Me%20interesa%20el%20plan%20%22Colaborador%20local%22%20(%2420%20USD)%20para%20el%20Seminario%20Nacional%202026.%20Por%20favor%2C%20necesito%20informaci%C3%B3n%20para%20formalizar%20mi%20apoyo.%20Gracias." class="btn-contact-wa" style="background: var(--oro-patrocinio); color: #2d1f00;"><i class="fab fa-whatsapp"></i> APOYAR AHORA</a>
                 </div>
 
+                <!-- Plan Patrocinante Aliado (MÁS POPULAR) -->
                 <div class="level-card level-puravida">
                     <div class="level-header">
-                        <div style="background: var(--verde-agua); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">MÁS POPULAR</div>
+                        <div class="badge-plan" style="background: #c6f6e5; color: #2c7a4d;">⭐ MÁS POPULAR</div>
                         <h3>Patrocinante Aliado</h3>
-                        <div class="level-price">$50</div>
+                        <div class="level-price">$50 USD</div>
                     </div>
                     <div class="level-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> <span><strong>Logo en Manga/Espalda</strong> de la Franela Oficial del evento.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Material POP:</strong> Inserción de su publicidad dentro del Kit del Atleta.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Banner Individual:</strong> Espacio para colocar su propio banner en el área de práctica.</span></li>
-                            <li><i class="fas fa-check"></i> <span>2 Post dedicados en Instagram agradeciendo la alianza.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Logo en Manga/Espalda</strong> de la Franela Oficial del evento.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Material POP:</strong> Inserción de su publicidad dentro del Kit del Atleta.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Banner Individual:</strong> espacio para colocar su propio banner en área de práctica.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>2 Post dedicados en Instagram agradeciendo la alianza.</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/584123585427" class="btn-contact" style="background: var(--verde-agua);">ELEGIR ESTE PLAN</a>
+                    <!-- Enlace con mensaje predefinido para Patrocinante Aliado -->
+                    <a href="https://wa.me/584123585427?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20alianza%20de%20Aikido%20Margarita.%20Estoy%20interesado%20en%20el%20plan%20%22Patrocinante%20Aliado%22%20(%2450%20USD)%20con%20visibilidad%20en%20franela%20oficial%20y%20kit%20del%20atleta.%20Deseo%20concretar%20el%20patrocinio.%20Gracias." class="btn-contact-wa" style="background: var(--verde-agua);"><i class="fab fa-whatsapp"></i> ELEGIR ESTE PLAN</a>
                 </div>
 
+                <!-- Plan Patrocinante Élite -->
                 <div class="level-card level-elite">
                     <div class="level-header">
-                        <div style="background: var(--azul-profundo); color: white; font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px; font-weight: bold;">MÁXIMA VISIBILIDAD</div>
+                        <div class="badge-plan" style="background: #e0e7ff; color: #1e3a8a;">🏆 MÁXIMA VISIBILIDAD</div>
                         <h3>Patrocinante Élite</h3>
-                        <div class="level-price">$100</div>
+                        <div class="level-price">$100 USD</div>
                     </div>
                     <div class="level-body">
                         <ul>
-                            <li><i class="fas fa-check"></i> <span><strong>Posición de Honor:</strong> Logo en el PECHO de la Franela Oficial.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Naming Rights:</strong> "Presentado por [Su Marca]" en comunicaciones oficiales.</span></li>
-                            <li><i class="fas fa-check"></i> <span><strong>Stand Comercial:</strong> Espacio exclusivo para exhibición de productos/servicios.</span></li>
-                            <li><i class="fas fa-check"></i> <span>Menciones prioritarias por megafonía durante todo el seminario.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Posición de Honor:</strong> Logo en el PECHO de la Franela Oficial.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Naming Rights:</strong> "Presentado por [Su Marca]" en comunicaciones oficiales.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span><strong>Stand Comercial:</strong> espacio exclusivo para exhibición.</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span>Menciones prioritarias por megafonía durante todo el seminario.</span></li>
                         </ul>
                     </div>
-                    <a href="https://wa.me/584123585427" class="btn-contact">SOLICITAR EXCLUSIVIDAD</a>
+                    <!-- Enlace con mensaje predefinido para Patrocinante Élite -->
+                    <a href="https://wa.me/584123585427?text=Hola%2C%20soy%20potencial%20patrocinante%20%C3%89lite%20desde%20la%20p%C3%A1gina%20oficial%20de%20Aikido%20Margarita.%20Me%20interesa%20el%20plan%20%22Patrocinante%20%C3%89lite%22%20(%24100%20USD)%20con%20stand%20comercial%20y%20naming%20rights.%20Por%20favor%2C%20confirmar%20disponibilidad%20y%20detalles%20de%20pago." class="btn-contact-wa"><i class="fab fa-whatsapp"></i> SOLICITAR EXCLUSIVIDAD</a>
                 </div>
+            </div>
 
+            <!-- Nota adicional: claridad en los mensajes personalizados -->
+            <div style="background: #fef9e6; border-radius: 1rem; padding: 0.8rem 1rem; margin-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #a16207;">
+                <i class="fas fa-comment-dots"></i> Al hacer clic, se abrirá WhatsApp con un mensaje prediseñado indicando el plan exacto. Así podremos atenderle rápidamente sin confusiones.
             </div>
         </section>
 
+        <!-- Bloque de contacto final (mejora con link opcional, pero se mantiene info) -->
         <div class="contact-footer">
             <h2 style="color: var(--azul-profundo);">Construyamos esta alianza</h2>
-            <p style="color: var(--gris-legal); margin-bottom: 30px;">Su apoyo es fundamental para el éxito de este encuentro nacional.</p>
-            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <span><i class="fab fa-whatsapp" style="color: #25d366;"></i> 0412.3585427</span>
-                <span><i class="far fa-envelope" style="color: #e53e3e;"></i> aikidodigital@gmail.com</span>
-                <span><i class="fas fa-user-circle"></i> Lic. Oney Clavijo</span>
+            <p style="color: var(--gris-legal); margin-bottom: 1rem;">Su apoyo es fundamental para el éxito de este encuentro nacional.</p>
+            <div class="contact-row">
+                <div class="contact-item"><i class="fab fa-whatsapp" style="color: #25d366;"></i> <strong>+58 412 3585427</strong> (Oney Clavijo)</div>
+                <div class="contact-item"><i class="far fa-envelope" style="color: #e53e3e;"></i> aikidodigital@gmail.com</div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> La Asunción, Margarita</div>
             </div>
-            <div style="margin-top: 30px;">
-                <a href="index.html" style="color: var(--azul-profundo); font-weight: bold; text-decoration: none;"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+            <div style="margin-top: 1.5rem;">
+                <a href="index.html" style="color: var(--azul-profundo); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--bronce); padding-bottom: 2px;"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
             </div>
         </div>
-
     </div>
 
-    <footer style="text-align: center; padding: 40px; color: var(--gris-legal); font-size: 0.8rem;">
-        <p>Organización Aikikai Nueva Esparta &copy; 2026<br>La Asunción, Isla de Margarita, Venezuela.</p>
+    <footer style="text-align: center; padding: 2rem 1rem; background: #eef2f5; color: var(--gris-legal); font-size: 0.8rem; margin-top: 1rem;">
+        <p>Organización Aikikai Nueva Esparta &copy; 2026 · Seminario Nacional de Aikido<br>La Asunción, Isla de Margarita, Venezuela.  Causa social: @perritosudone</p>
     </footer>
 
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-            document.getElementById('btn-' + sectionId).classList.add('active');
+            // Ocultar todas las secciones
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Remover clase active de todos los botones
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Mostrar sección seleccionada y activar botón
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) activeSection.classList.add('active');
+            const activeBtn = document.getElementById('btn-' + sectionId);
+            if (activeBtn) activeBtn.classList.add('active');
         }
+
+        // Si se pasa un hash en la URL (#niveles) se puede activar automáticamente
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                const hashSection = window.location.hash.substring(1);
+                if (['evento', 'beneficios', 'niveles'].includes(hashSection)) {
+                    showSection(hashSection);
+                }
+            }
+        });
     </script>
 </body>
 </html>
